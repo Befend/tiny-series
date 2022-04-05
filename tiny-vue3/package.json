@@ -1,0 +1,22 @@
+{
+  "name": "tiny-vue3",
+  "version": "1.0.0",
+  "description": "the class about learning vue3`s source code",
+  "main": "index.js",
+  "author": "chan",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "build:type": "tsc -p ./tsconfig.type.json",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "typescript": "^4.6.3"
+  }
+}
