@@ -1,7 +1,7 @@
 {
   "name": "tiny-vue3",
   "version": "1.0.0",
-  "description": "the class about learning vue3`s source code",
+  "description": "A project about learning vue3 knowledge",
   "main": "index.js",
   "author": "chan",
   "license": "MIT",
