@@ -1,4 +1,8 @@
 import { extend } from "../shared/index"
+
+
+let activeEffect
+let shouldTrack
 class ReactiveEffect {
   private _fn: any
   deps = []
@@ -10,7 +14,18 @@ class ReactiveEffect {
 
   run() {
     activeEffect = this
-    return this._fn()
+    // 1. 会收集依赖
+    // shouldTrack 来做区分
+    if (!this.active) {
+      return this._fn()
+    }
+    shouldTrack = true
+    activeEffect = this
+
+    const result = this._fn()
+    // reset 
+    shouldTrack = false
+    return result
   }
   stop() {
     if (this.active) {
@@ -27,10 +42,14 @@ function cleanupEffect(effect) {
   effect.deps.forEach((dep: any) => {
     dep.delete(effect)
   });
+  effect.deps.length = 0
 }
 
 const targetMap = new Map()
 export function track(target, key) {
+  // 判断是否处于收集状态
+  if (!isTracking()) return
+
   // target -> key -> dep
   let desMap = targetMap.get(target)
   if (!desMap) {
@@ -43,9 +62,13 @@ export function track(target, key) {
     dep = new Set()
     desMap.set(key, dep)
   }
-  if (!activeEffect) return
+  if (dep.has(activeEffect)) return
   dep.add(activeEffect)
   activeEffect.deps.push(dep)
+}
+
+function isTracking() {
+  return shouldTrack && activeEffect !== undefined
 }
 
 export function trigger(target, key) {
@@ -60,7 +83,6 @@ export function trigger(target, key) {
   }
 }
 
-let activeEffect
 export function effect(fn, options:any = {}) {
   // fn
   const _effect = new ReactiveEffect(fn, options.scheduler)
