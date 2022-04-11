@@ -52,3 +52,22 @@ export function unRef(ref) {
   // 判断是否 ref -> ref.value
   return isRef(ref) ? ref.value : ref
 }
+
+export function proxyRefs(objectWithRefs) {
+  return new Proxy(objectWithRefs, {
+    get(target, key) {
+       // get -> age
+      //      ref -> 那么给他返回.value
+      //  not ref -> value
+      return unRef(Reflect.get(target, key))
+    },
+    set(target, key, value) {
+      // set -> ref   .value
+      if (isRef(target[key]) && !isRef(value)) {
+        return target[key].value = value
+      } else {
+        return Reflect.set(target, key, value)
+      }
+    }
+  })
+}
