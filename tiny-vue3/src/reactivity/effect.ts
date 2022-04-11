@@ -62,18 +62,28 @@ export function track(target, key) {
     dep = new Set()
     desMap.set(key, dep)
   }
+
+  trackEffects(dep)
+}
+
+export function trackEffects(dep) {
+  // 看看dep之前有没有添加过，添加过就不添加了
   if (dep.has(activeEffect)) return
   dep.add(activeEffect)
   activeEffect.deps.push(dep)
 }
 
-function isTracking() {
+export function isTracking() {
   return shouldTrack && activeEffect !== undefined
 }
 
 export function trigger(target, key) {
   let desMap = targetMap.get(target)
   let dep = desMap.get(key)
+  triggerEffects(dep)
+}
+
+export function triggerEffects(dep) {
   for(const effect of dep) {
     if (effect.scheduler) {
       effect.scheduler()
