@@ -2,11 +2,13 @@
   "name": "tiny-vue3",
   "version": "1.0.0",
   "description": "A project about learning vue3 knowledge",
-  "main": "index.js",
+  "main": "lib/tiny-vue3.cjs.js",
+  "module": "lib/tiny-vue3.esm.js",
   "author": "chan",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
+    "build:w": "rollup -c rollup.config.js --watch",
+    "build": "rollup -c rollup.config.js",
     "build:type": "tsc -p ./tsconfig.type.json",
     "test": "jest"
   },
@@ -14,9 +16,12 @@
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-typescript": "^8.3.1",
     "@types/jest": "^27.4.1",
     "babel-jest": "^27.5.1",
     "jest": "^27.5.1",
+    "rollup": "^2.70.1",
+    "tslib": "^2.3.1",
     "typescript": "^4.6.3"
   }
 }

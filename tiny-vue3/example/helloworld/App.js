@@ -1,3 +1,4 @@
+import { h } from '../../lib/tiny-vue3.esm.js';
 export const App = {
   // .vue
   // <template></template>

@@ -7,11 +7,17 @@ export function render(vnode, container) {
 }
 
 function patch(vnode, container) {
-  // 判断是不是 element
+  // TODO 判断vnode是不是一个element 
+  // 如果是element, 处理element
+  // 思考题： 如何区分element 和 component 类型呢？
+  // processElement(vnode, container)
+
   // 处理组件
   processComponent(vnode, container)
+}
 
-  // TODO 处理element
+function processElement(vnode: any, container: any) {
+
 }
 
 function processComponent(vnode: any, container: any) {
