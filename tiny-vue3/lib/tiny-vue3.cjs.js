@@ -50,29 +50,62 @@ function finishComponentSetup(instance) {
 function render(vnode, container) {
     // patch
     // 
-    patch(vnode);
+    patch(vnode, container);
 }
 function patch(vnode, container) {
     // TODO 判断vnode是不是一个element 
     // 如果是element, 处理element
     // 思考题： 如何区分element 和 component 类型呢？
     // processElement(vnode, container)
-    // 处理组件
-    processComponent(vnode);
+    console.log(vnode.type);
+    if (typeof vnode.type === 'string') {
+        processElement(vnode, container);
+    }
+    else {
+        // 处理组件
+        processComponent(vnode, container);
+    }
+}
+function processElement(vnode, container) {
+    mountElement(vnode, container);
+}
+function mountElement(vnode, container) {
+    const el = document.createElement(vnode.type);
+    // string array
+    const { children } = vnode;
+    if (typeof children === "string") {
+        el.textContent = children;
+    }
+    else if (Array.isArray(children)) {
+        // vnode
+        mountChildren(vnode, el);
+    }
+    // props
+    const { props } = vnode;
+    for (const key in props) {
+        const val = props[key];
+        el.setAttribute(key, val);
+    }
+    container.append(el);
+}
+function mountChildren(vnode, container) {
+    vnode.children.forEach((v) => {
+        patch(v, container);
+    });
 }
 function processComponent(vnode, container) {
-    mountComponent(vnode);
+    mountComponent(vnode, container);
 }
 function mountComponent(vnode, container) {
     const instance = createComponentInstance(vnode);
     setupComponents(instance);
-    setupRenderEffect(instance);
+    setupRenderEffect(instance, container);
 }
 function setupRenderEffect(instance, container) {
     const subTree = instance.render();
     // vnode -> patch
     // vnode -> element -> mountElement
-    patch(subTree);
+    patch(subTree, container);
 }
 
 function createApp(rootComponent) {
@@ -82,7 +115,7 @@ function createApp(rootComponent) {
             // component -> vnode
             // 后续所有的逻辑操作都会基于 vnode 处理
             const vnode = createVNode(rootComponent);
-            render(vnode);
+            render(vnode, rootContainer);
         }
     };
 }
