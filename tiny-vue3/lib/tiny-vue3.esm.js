@@ -7,10 +7,33 @@ function createVNode(type, props, children) {
     return vnode;
 }
 
+const publicPropertiesMap = {
+    $el: (i) => i.vnode.el
+};
+const PublicInstanceProxyHandlers = {
+    get({ _: instance }, key) {
+        // setupState
+        const { setupState } = instance;
+        if (key in setupState) {
+            return setupState[key];
+        }
+        // key -> $el
+        // if (key === "$el") {
+        //   return instance.vnode.el
+        // }
+        const publicGetter = publicPropertiesMap[key];
+        if (publicGetter) {
+            return publicGetter(instance);
+        }
+    }
+};
+
 function createComponentInstance(vnode) {
     const component = {
         vnode,
-        type: vnode.type
+        type: vnode.type,
+        setupState: {},
+        el: null
     };
     return component;
 }
@@ -22,6 +45,8 @@ function setupComponents(instance) {
 }
 function setupStatefulComponent(instance) {
     const Component = instance.type;
+    // ctx
+    instance.proxy = new Proxy({ _: instance }, PublicInstanceProxyHandlers);
     const { setup } = Component;
     if (setup) {
         const setupResult = setup();
@@ -66,7 +91,8 @@ function processElement(vnode, container) {
     mountElement(vnode, container);
 }
 function mountElement(vnode, container) {
-    const el = document.createElement(vnode.type);
+    // vnode -> element - div
+    const el = (vnode.el = document.createElement(vnode.type));
     // string array
     const { children } = vnode;
     if (typeof children === "string") {
@@ -92,16 +118,19 @@ function mountChildren(vnode, container) {
 function processComponent(vnode, container) {
     mountComponent(vnode, container);
 }
-function mountComponent(vnode, container) {
-    const instance = createComponentInstance(vnode);
+function mountComponent(initialVNode, container) {
+    const instance = createComponentInstance(initialVNode);
     setupComponents(instance);
-    setupRenderEffect(instance, container);
+    setupRenderEffect(instance, initialVNode, container);
 }
-function setupRenderEffect(instance, container) {
-    const subTree = instance.render();
+function setupRenderEffect(instance, initialVNode, container) {
+    const { proxy } = instance;
+    const subTree = instance.render.call(proxy);
     // vnode -> patch
     // vnode -> element -> mountElement
     patch(subTree, container);
+    // element -> mount
+    initialVNode.el = subTree.el;
 }
 
 function createApp(rootComponent) {
