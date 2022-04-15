@@ -6,9 +6,23 @@ function createVNode(type, props, children) {
     const vnode = {
         type,
         props,
-        children
+        children,
+        shapeFlag: getShapeFlag(type),
+        el: null
     };
+    // children
+    if (typeof children === "string") {
+        vnode.shapeFlag |= 4 /* TEXT_CHILDREN */;
+    }
+    else if (Array.isArray(children)) {
+        vnode.shapeFlag |= 8 /* ARRAY_CHILDREN */;
+    }
     return vnode;
+}
+function getShapeFlag(type) {
+    return typeof type === "string"
+        ? 1 /* ELEMENT */
+        : 2 /* STATEFUL_COMPONENT */;
 }
 
 const publicPropertiesMap = {
@@ -78,15 +92,16 @@ function render(vnode, container) {
     patch(vnode, container);
 }
 function patch(vnode, container) {
-    // TODO 判断vnode是不是一个element 
-    // 如果是element, 处理element
-    // 思考题： 如何区分element 和 component 类型呢？
-    // processElement(vnode, container)
-    console.log(vnode.type);
-    if (typeof vnode.type === 'string') {
+    // ShapeFlags
+    // vnode -> flag
+    // 判断vnode是 element 和 component 类型
+    // element
+    const { shapeFlag } = vnode;
+    if (shapeFlag & shapeFlag.ELEMENT) {
         processElement(vnode, container);
+        // STATEFUL_COMPONENT
     }
-    else {
+    else if (shapeFlag & shapeFlag.STATEFUL_COMPONENT) {
         // 处理组件
         processComponent(vnode, container);
     }
@@ -98,12 +113,13 @@ function mountElement(vnode, container) {
     // vnode -> element - div
     const el = (vnode.el = document.createElement(vnode.type));
     // string array
-    const { children } = vnode;
-    if (typeof children === "string") {
+    const { children, shapeFlag } = vnode;
+    if (shapeFlag & shapeFlag.TEXT_CHILDREN) {
+        // text_children
         el.textContent = children;
     }
-    else if (Array.isArray(children)) {
-        // vnode
+    else if (shapeFlag & shapeFlag.ARRAY_CHILDREN) {
+        // array_children
         mountChildren(vnode, el);
     }
     // props
