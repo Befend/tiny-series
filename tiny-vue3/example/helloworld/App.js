@@ -11,7 +11,13 @@ export const App = {
       "div",
       {
         id: "root",
-        class: ["red", "test"]
+        class: ["red", "test"],
+        onClick() {
+          console.log('click')
+        },
+        onMousedown() {
+          console.log('mousedown')
+        }
       },
       // setupState
       // this.$el -> get root element
