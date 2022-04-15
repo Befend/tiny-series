@@ -88,20 +88,17 @@ function finishComponentSetup(instance) {
 
 function render(vnode, container) {
     // patch
-    // 
     patch(vnode, container);
 }
 function patch(vnode, container) {
     // ShapeFlags
     // vnode -> flag
-    // 判断vnode是 element 和 component 类型
-    // element
+    // 判断vnode是 element 和 component 类型\
     const { shapeFlag } = vnode;
-    if (shapeFlag & shapeFlag.ELEMENT) {
+    if (shapeFlag & 1 /* ELEMENT */) { // element
         processElement(vnode, container);
-        // STATEFUL_COMPONENT
     }
-    else if (shapeFlag & shapeFlag.STATEFUL_COMPONENT) {
+    else if (shapeFlag & 2 /* STATEFUL_COMPONENT */) { // STATEFUL_COMPONENT
         // 处理组件
         processComponent(vnode, container);
     }
@@ -114,11 +111,11 @@ function mountElement(vnode, container) {
     const el = (vnode.el = document.createElement(vnode.type));
     // string array
     const { children, shapeFlag } = vnode;
-    if (shapeFlag & shapeFlag.TEXT_CHILDREN) {
+    if (shapeFlag & 4 /* TEXT_CHILDREN */) {
         // text_children
         el.textContent = children;
     }
-    else if (shapeFlag & shapeFlag.ARRAY_CHILDREN) {
+    else if (shapeFlag & 8 /* ARRAY_CHILDREN */) {
         // array_children
         mountChildren(vnode, el);
     }
