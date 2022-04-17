@@ -32,6 +32,17 @@ const isObject = (value) => {
 const hasOwn = (val, key) => {
     return Object.prototype.hasOwnProperty.call(val, key);
 };
+const camelize = (str) => {
+    return str.replace(/-(\w)/g, (_, c) => {
+        return c ? c.toUpperCase() : "";
+    });
+};
+const capitalize = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};
+const toHandlerKey = (str) => {
+    return str ? `on${capitalize(str)}` : "";
+};
 
 const publicPropertiesMap = {
     $el: (i) => i.vnode.el
@@ -141,13 +152,31 @@ function initProps(instance, rawProps) {
     // attrs
 }
 
+function emit(instance, event, ...args) {
+    console.log("emit", event);
+    // instance.props -> event
+    const { props } = instance;
+    // TPP
+    // 先去写一个特定的行为 -> 重构成通用的行为
+    // add
+    // const handler = props["onAdd"]
+    // 重构
+    // add -> Add
+    // add-foo -> addFoo
+    const handlerName = toHandlerKey(camelize(event));
+    const handler = props[handlerName];
+    handler && handler(...args);
+}
+
 function createComponentInstance(vnode) {
     const component = {
         vnode,
         type: vnode.type,
         setupState: {},
-        el: null
+        props: {},
+        emit: () => { }
     };
+    component.emit = emit.bind(null, component);
     return component;
 }
 function setupComponents(instance) {
@@ -162,7 +191,9 @@ function setupStatefulComponent(instance) {
     instance.proxy = new Proxy({ _: instance }, PublicInstanceProxyHandlers);
     const { setup } = Component;
     if (setup) {
-        const setupResult = setup(shallowReadonly(instance.props));
+        const setupResult = setup(shallowReadonly(instance.props), {
+            emit: instance.emit
+        });
         handleSetupResult(instance, setupResult);
     }
 }
