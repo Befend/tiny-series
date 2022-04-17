@@ -13,6 +13,12 @@ function createVNode(type, props, children) {
     else if (Array.isArray(children)) {
         vnode.shapeFlag |= 8 /* ARRAY_CHILDREN */;
     }
+    // 组件 + children object
+    if (vnode.shapeFlag & 2 /* STATEFUL_COMPONENT */) {
+        if (typeof children === "object") {
+            vnode.shapeFlag |= 16 /* SLOT_CHILDREN */;
+        }
+    }
     return vnode;
 }
 function getShapeFlag(type) {
@@ -41,15 +47,13 @@ const toHandlerKey = (str) => {
 };
 
 const publicPropertiesMap = {
-    $el: (i) => i.vnode.el
+    $el: (i) => i.vnode.el,
+    $slots: (i) => i.slots
 };
 const PublicInstanceProxyHandlers = {
     get({ _: instance }, key) {
         // setupState
         const { setupState, props } = instance;
-        if (key in setupState) {
-            return setupState[key];
-        }
         if (hasOwn(setupState, key)) {
             return setupState[key];
         }
@@ -164,21 +168,38 @@ function emit(instance, event, ...args) {
     handler && handler(...args);
 }
 
+function initSlots(instance, children) {
+    // slots
+    const { vnode } = instance;
+    if (vnode.shapeFlag & 16 /* SLOT_CHILDREN */) {
+        normalizeObjectSlots(children, instance.slots);
+    }
+}
+function normalizeObjectSlots(children, slots) {
+    for (const key in children) {
+        const value = children[key];
+        slots[key] = (props) => normalizeSlotValue(value(props));
+    }
+}
+function normalizeSlotValue(value) {
+    return Array.isArray(value) ? value : [value];
+}
+
 function createComponentInstance(vnode) {
     const component = {
         vnode,
         type: vnode.type,
         setupState: {},
         props: {},
+        slots: {},
         emit: () => { }
     };
     component.emit = emit.bind(null, component);
     return component;
 }
 function setupComponents(instance) {
-    // TODO:
-    // initSlots()
     initProps(instance, instance.vnode.props);
+    initSlots(instance, instance.vnode.children);
     setupStatefulComponent(instance);
 }
 function setupStatefulComponent(instance) {
@@ -297,4 +318,14 @@ function h(type, props, children) {
     return createVNode(type, props, children);
 }
 
-export { createApp, h };
+function renderSlots(slots, name, props) {
+    const slot = slots[name];
+    if (slot) {
+        // function
+        if (typeof slot === "function") {
+            return createVNode("div", {}, slot(props));
+        }
+    }
+}
+
+export { createApp, h, renderSlots };
