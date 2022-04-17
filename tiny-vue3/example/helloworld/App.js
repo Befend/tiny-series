@@ -1,15 +1,16 @@
 import { h } from "../../lib/tiny-vue3.esm.js"
+import { Foo } from "./Foo.js"
 
 export const App = {
+  name: "App",
   // .vue
   // <template></template>
-  // render
+  // 必须要写 render
   render() {
     // ui
     window.self = this
     return h(
-      "div",
-      {
+      "div", {
         id: "root",
         class: ["red", "test"],
         onClick() {
@@ -19,9 +20,12 @@ export const App = {
           console.log('mousedown')
         }
       },
+      [h("div", {}, "hi," + this.msg), h(Foo, {
+        count: 1
+      })]
       // setupState
       // this.$el -> get root element
-      "hi, " + this.msg
+      // "hi, " + this.msg
       // string
       // "hi, tiny-vue3"
 
