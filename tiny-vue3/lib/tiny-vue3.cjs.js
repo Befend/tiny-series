@@ -2,6 +2,8 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+const Fragment = Symbol("Fragment");
+const Text = Symbol("Text");
 function createVNode(type, props, children) {
     const vnode = {
         type,
@@ -24,6 +26,9 @@ function createVNode(type, props, children) {
         }
     }
     return vnode;
+}
+function createTextVNode(text) {
+    return createVNode(Text, {}, text);
 }
 function getShapeFlag(type) {
     return typeof type === "string"
@@ -241,14 +246,34 @@ function patch(vnode, container) {
     // ShapeFlags
     // vnode -> flag
     // 判断vnode是 element 和 component 类型\
-    const { shapeFlag } = vnode;
-    if (shapeFlag & 1 /* ELEMENT */) { // element
-        processElement(vnode, container);
+    const { type, shapeFlag } = vnode;
+    // Fragment -> 只渲染 children
+    switch (type) {
+        case Fragment:
+            processFragment(vnode, container);
+            break;
+        case Text:
+            processText(vnode, container);
+            break;
+        default:
+            if (shapeFlag & 1 /* ELEMENT */) { // element
+                processElement(vnode, container);
+            }
+            else if (shapeFlag & 2 /* STATEFUL_COMPONENT */) { // STATEFUL_COMPONENT
+                // 处理组件
+                processComponent(vnode, container);
+            }
+            break;
     }
-    else if (shapeFlag & 2 /* STATEFUL_COMPONENT */) { // STATEFUL_COMPONENT
-        // 处理组件
-        processComponent(vnode, container);
-    }
+}
+function processText(vnode, container) {
+    const { children } = vnode;
+    const textNode = (vnode.el = document.createTextNode(children));
+    container.append(textNode);
+}
+function processFragment(vnode, container) {
+    // Implement
+    mountChildren(vnode, container);
 }
 function processElement(vnode, container) {
     mountElement(vnode, container);
@@ -327,11 +352,14 @@ function renderSlots(slots, name, props) {
     if (slot) {
         // function
         if (typeof slot === "function") {
-            return createVNode("div", {}, slot(props));
+            // children 是不可以有 array
+            // 只需要把 children
+            return createVNode(Fragment, {}, slot(props));
         }
     }
 }
 
 exports.createApp = createApp;
+exports.createTextVNode = createTextVNode;
 exports.h = h;
 exports.renderSlots = renderSlots;
