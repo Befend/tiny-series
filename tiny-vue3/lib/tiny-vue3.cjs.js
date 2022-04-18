@@ -217,9 +217,11 @@ function setupStatefulComponent(instance) {
     instance.proxy = new Proxy({ _: instance }, PublicInstanceProxyHandlers);
     const { setup } = Component;
     if (setup) {
+        setCurrentInstance(instance);
         const setupResult = setup(shallowReadonly(instance.props), {
             emit: instance.emit
         });
+        setCurrentInstance(null);
         handleSetupResult(instance, setupResult);
     }
 }
@@ -236,6 +238,13 @@ function finishComponentSetup(instance) {
     if (Component.render) {
         instance.render = Component.render;
     }
+}
+let currentInstance = null;
+function getCurrentInstance() {
+    return currentInstance;
+}
+function setCurrentInstance(instance) {
+    currentInstance = instance;
 }
 
 function render(vnode, container) {
@@ -361,5 +370,6 @@ function renderSlots(slots, name, props) {
 
 exports.createApp = createApp;
 exports.createTextVNode = createTextVNode;
+exports.getCurrentInstance = getCurrentInstance;
 exports.h = h;
 exports.renderSlots = renderSlots;
