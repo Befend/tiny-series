@@ -23,23 +23,23 @@
 
 ## runtime-core
 
-- [x]初始化 Component
-- [x]支持 rollup 打包
-- [x]初始化 element 主流程
-- [x]支持 组件代理对象
-- [x]支持 shapeFlags
-- [x]支持 注册事件功能
-- [x]实现 组件 props 逻辑
-- [x]实现 组件 emit 功能
-- [x]支持 slots 功能
-- [x]支持 Fragment 和 Text 类型节点
-- [x]支持 getCurrentInstance
-- [x]支持 provide/inject
+- [x] 初始化 Component
+- [x] 支持 rollup 打包
+- [x] 初始化 element 主流程
+- [x] 支持 组件代理对象
+- [x] 支持 shapeFlags
+- [x] 支持 注册事件功能
+- [x] 实现 组件 props 逻辑
+- [x] 实现 组件 emit 功能
+- [x] 支持 slots 功能
+- [x] 支持 Fragment 和 Text 类型节点
+- [x] 支持 getCurrentInstance
+- [x] 支持 provide/inject
 
 ## runtime-dom
 
-- [x]实现自定义渲染器 custom/renderer
-- [x]更新 element 流程搭建
+- [x] 实现自定义渲染器 custom/renderer
+- [x] 更新 element 流程搭建
 - [ ]更新 element props
 - [ ]更新 element children
 - [ ]实现 双端对比 diff 算法
