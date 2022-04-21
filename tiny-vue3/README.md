@@ -40,25 +40,26 @@
 
 - [x] 实现自定义渲染器 custom/renderer
 - [x] 更新 element 流程搭建
-- [ ]更新 element props
-- [ ]更新 element children
-- [ ]实现 双端对比 diff 算法
-- [ ]实现 组件更新
-- [ ]支持 nextTick
+- [x]更新 element props
+- [x]更新 element children
+- [x]实现 双端对比 diff 算法
+- [x]实现 组件更新
+- [x]支持 nextTick
 
 ## compiler-core
 
-- [ ]实现 解析插值功能
-- [ ]实现 解析 element 标签
-- [ ]实现 解析 text 功能
-- [ ]实现 解析三种联合类型
-- [ ]实现 parse&有限状态机
-- [ ]实现 transform
-- [ ]实现 代码生成 string 类型
-- [ ]实现 代码生成插值类型 cmproj
-- [ ]实现 代码生成三种联合类型
-- [ ]实现 编译 template 成 render 函数
+- [x]实现 解析插值功能
+- [x]实现 解析 element 标签
+- [x]实现 解析 text 功能
+- [x]实现 解析三种联合类型
+- [x]实现 parse&有限状态机
+- [x]实现 transform
+- [x]实现 代码生成 string 类型
+- [x]实现 代码生成插值类型 cmproj
+- [x]实现 代码生成三种联合类型
+- [x]实现 编译 template 成 render 函数
 
+# 项目应用
 ## 项目初始化
 
 ```javascript
