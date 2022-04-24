@@ -223,7 +223,7 @@ export function createRenderer(options) {
     // container.append(el)
 
     // canvas -> addChild()
-    hostInsert(el, container)
+    hostInsert(el, container, anchor)
   }
 
   function mountChildren(children, container, parentComponent, anchor) {
