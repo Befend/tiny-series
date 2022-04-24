@@ -603,6 +603,48 @@ function createRenderer(options) {
                 i++;
             }
         }
+        else {
+            // 中间对比
+            let s1 = i;
+            let s2 = i;
+            const toBePatched = e2 - s2 + 1;
+            let patched = 0;
+            // 存储新表的映射关系
+            const keyToNewIndexMap = new Map();
+            for (let i = s2; i <= e2; i++) {
+                const nextChild = c2[i];
+                // 设置新表的映射关系
+                keyToNewIndexMap.set(nextChild.key, i);
+            }
+            for (let i = s1; i <= e1; i++) {
+                const preChild = c1[i];
+                if (patched >= toBePatched) {
+                    hostRemove(preChild.el);
+                    continue;
+                }
+                // null undefined
+                let newIndex;
+                if (preChild.key !== null) {
+                    // 获取新表的映射关系
+                    newIndex = keyToNewIndexMap.get(preChild.key);
+                }
+                else {
+                    for (let j = s2; j < e2; j++) {
+                        if (isSomeVNodeType(preChild, c2[j])) {
+                            newIndex = j;
+                            break;
+                        }
+                    }
+                }
+                if (newIndex === undefined) {
+                    hostRemove(preChild.el);
+                }
+                else {
+                    patch(preChild, c2[newIndex], container, parentComponent, null);
+                    patched++;
+                }
+            }
+        }
     }
     function unmountChildren(children) {
         for (let i = 0; i < children.length; i++) {
