@@ -203,7 +203,7 @@ export function createRenderer(options) {
           // 获取新表的映射关系
           newIndex = keyToNewIndexMap.get(preChild.key)
         } else {
-          for (let j = s2; j < e2; j++) {
+          for (let j = s2; j <= e2; j++) {
             if (isSomeVNodeType(preChild, c2[j])) {
               newIndex = j
               break
