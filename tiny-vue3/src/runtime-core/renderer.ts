@@ -4,6 +4,7 @@ import { Fragment, Text } from "./vnode"
 import { createAppAPI } from "./createApp"
 import { effect } from "../reactivity/effect"
 import { EMPTY_OBJ } from "../shared"
+import { shouldUpdateComponent } from "./componentUpdateUtils"
 
 export function createRenderer(options) {
   const {
@@ -314,17 +315,31 @@ export function createRenderer(options) {
   }
 
   function processComponent(n1, n2: any, container: any, parentComponent, anchor) {
-    mountComponent(n2, container, parentComponent, anchor)
+    if (!n1) {
+      mountComponent(n2, container, parentComponent, anchor)
+    } else {
+      updateComponent(n1, n2)
+    }
+  }
+
+  function updateComponent(n1, n2) {
+    const instance = (n2.component = n1.component)
+    if (shouldUpdateComponent(n1, n2)) {
+      instance.next = n2
+      instance.update()
+    } else {
+      n2.el = n1.el
+    }
   }
 
   function mountComponent(initialVNode: any, container: any, parentComponent, anchor) {
-    const instance = createComponentInstance(initialVNode, parentComponent)
+    const instance = (initialVNode.component = createComponentInstance(initialVNode, parentComponent))
     setupComponents(instance)
     setupRenderEffect(instance, initialVNode, container, anchor)
   }
 
   function setupRenderEffect(instance: any, initialVNode: any, container: any, anchor) {
-    effect(() => {
+    instance.update = effect(() => {
       if (!instance.isMounted) {
         // init
         console.log("init");
@@ -342,6 +357,13 @@ export function createRenderer(options) {
       } else {
         // update
         console.log("update");
+        // 需要一个新的 vnode
+        const { next, vnode } = instance
+        if (next) {
+          next.el = vnode.el
+          updateComponentPreRender(instance, next)
+        }
+
         const { proxy } = instance
         const subTree = instance.render.call(proxy)
         const preSubTree = instance.subTree
@@ -355,6 +377,12 @@ export function createRenderer(options) {
   return {
     createApp: createAppAPI(render)
   }
+}
+
+function updateComponentPreRender(instance, nextVNode) {
+  instance.vnode = nextVNode
+  instance.next = null
+  instance.props = nextVNode.props
 }
 
 // 最长递增子序列算法

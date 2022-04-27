@@ -5,6 +5,7 @@ function createVNode(type, props, children) {
         type,
         props,
         children,
+        component: null,
         key: props && props.key,
         shapeFlag: getShapeFlag(type),
         el: null
@@ -74,7 +75,8 @@ const toHandlerKey = (str) => {
 
 const publicPropertiesMap = {
     $el: (i) => i.vnode.el,
-    $slots: (i) => i.slots
+    $slots: (i) => i.slots,
+    $props: (i) => i.props
 };
 const PublicInstanceProxyHandlers = {
     get({ _: instance }, key) {
@@ -357,6 +359,7 @@ function createComponentInstance(vnode, parent) {
     const component = {
         vnode,
         type: vnode.type,
+        next: null,
         setupState: {},
         props: {},
         slots: {},
@@ -454,6 +457,17 @@ function createAppAPI(render) {
             }
         };
     };
+}
+
+function shouldUpdateComponent(prevVNode, nextVNode) {
+    const { props: prevProps } = prevVNode;
+    const { props: nextProps } = nextVNode;
+    for (const key in nextProps) {
+        if (nextProps[key] !== prevProps[key]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function createRenderer(options) {
@@ -731,15 +745,30 @@ function createRenderer(options) {
         });
     }
     function processComponent(n1, n2, container, parentComponent, anchor) {
-        mountComponent(n2, container, parentComponent, anchor);
+        if (!n1) {
+            mountComponent(n2, container, parentComponent, anchor);
+        }
+        else {
+            updateComponent(n1, n2);
+        }
+    }
+    function updateComponent(n1, n2) {
+        const instance = (n2.component = n1.component);
+        if (shouldUpdateComponent(n1, n2)) {
+            instance.next = n2;
+            instance.update();
+        }
+        else {
+            n2.el = n1.el;
+        }
     }
     function mountComponent(initialVNode, container, parentComponent, anchor) {
-        const instance = createComponentInstance(initialVNode, parentComponent);
+        const instance = (initialVNode.component = createComponentInstance(initialVNode, parentComponent));
         setupComponents(instance);
         setupRenderEffect(instance, initialVNode, container, anchor);
     }
     function setupRenderEffect(instance, initialVNode, container, anchor) {
-        effect(() => {
+        instance.update = effect(() => {
             if (!instance.isMounted) {
                 // init
                 console.log("init");
@@ -756,6 +785,12 @@ function createRenderer(options) {
             else {
                 // update
                 console.log("update");
+                // 需要一个新的 vnode
+                const { next, vnode } = instance;
+                if (next) {
+                    next.el = vnode.el;
+                    updateComponentPreRender(instance, next);
+                }
                 const { proxy } = instance;
                 const subTree = instance.render.call(proxy);
                 const preSubTree = instance.subTree;
@@ -767,6 +802,11 @@ function createRenderer(options) {
     return {
         createApp: createAppAPI(render)
     };
+}
+function updateComponentPreRender(instance, nextVNode) {
+    instance.vnode = nextVNode;
+    instance.next = null;
+    instance.props = nextVNode.props;
 }
 // 最长递增子序列算法
 function getSequence(arr) {
