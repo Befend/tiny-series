@@ -470,6 +470,32 @@ function shouldUpdateComponent(prevVNode, nextVNode) {
     return false;
 }
 
+const queue = [];
+const p = Promise.resolve();
+let isFlushPending = false;
+function nextTick(fn) {
+    return fn ? p.then(fn) : p;
+}
+function queueJobs(job) {
+    if (!queue.includes(job)) {
+        queue.push(job);
+    }
+    queueFlush();
+}
+function queueFlush() {
+    if (isFlushPending)
+        return;
+    isFlushPending = true;
+    nextTick(flushJobs);
+}
+function flushJobs() {
+    isFlushPending = false;
+    let job;
+    while ((job = queue.shift())) {
+        job && job();
+    }
+}
+
 function createRenderer(options) {
     const { createElement: hostCreateElement, patchProp: hostPatchProp, insert: hostInsert, remove: hostRemove, setElementText: hostSetElementText } = options;
     function render(vnode, container) {
@@ -797,6 +823,11 @@ function createRenderer(options) {
                 instance.subTree = subTree;
                 patch(preSubTree, subTree, container, instance, anchor);
             }
+        }, {
+            scheduler() {
+                console.log("update - scheduler");
+                queueJobs(instance.update);
+            }
         });
     }
     return {
@@ -896,4 +927,4 @@ function createApp(...args) {
     return renderer.createApp(...args);
 }
 
-export { createApp, createRenderer, createTextVNode, getCurrentInstance, h, inject, provide, proxyRefs, ref, renderSlots };
+export { createApp, createRenderer, createTextVNode, getCurrentInstance, h, inject, nextTick, provide, proxyRefs, ref, renderSlots };
