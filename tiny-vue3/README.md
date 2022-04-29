@@ -42,13 +42,13 @@
 - [x] 更新 element 流程搭建
 - [x] 更新 element props
 - [x] 更新 element children
-- [x]实现 双端对比 diff 算法
-- [x]实现 组件更新
-- [x]支持 nextTick
+- [x] 实现 双端对比 diff 算法
+- [x] 实现 组件更新
+- [x] 支持 nextTick
 
 ## compiler-core
 
-- [x]实现 解析插值功能
+- [x] 实现 解析插值功能
 - [x]实现 解析 element 标签
 - [x]实现 解析 text 功能
 - [x]实现 解析三种联合类型
