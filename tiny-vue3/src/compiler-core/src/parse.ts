@@ -9,7 +9,7 @@ export function baseParse(content: string) {
   return createRoot(parseChildren(context, []))
 }
 
-function parseChildren(context: any, ancestors) {
+function parseChildren(context, ancestors) {
   let nodes: any = []
 
   while(!isEnd(context, ancestors)) {
@@ -27,8 +27,8 @@ function parseChildren(context: any, ancestors) {
       node = parseText(context)
     }
     nodes.push(node)
-    return nodes
   }
+  return nodes
 }
 
 function isEnd(context, ancestors) {
@@ -40,10 +40,8 @@ function isEnd(context, ancestors) {
       if (startsWithEndTagOpen(s, tag)) {
         return true
       }
-      
     }
   }
-
   // 1. source 有值的时候
   return !s
 }
@@ -60,7 +58,7 @@ function parseText(context: any) {
   }
 
   // 1. 获取content
-  const content = parseTextData(0, endIndex)
+  const content = parseTextData(context, endIndex)
 
   return {
     type: NodeTypes.TEXT,
@@ -126,7 +124,7 @@ function parseInterpolation(context) {
   advanceBy(context, openDelimiter.length)
 
   const rawContentLength = closeIndex - openDelimiter.length
-  const rawContent = parseTextData(context, rawContentLength);
+  const rawContent = parseTextData(context, rawContentLength)
   const content = rawContent.trim()
 
   advanceBy(context, closeDelimiter.length)
