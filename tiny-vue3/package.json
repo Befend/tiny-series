@@ -10,6 +10,7 @@
     "build:w": "rollup -c rollup.config.js --watch",
     "build": "rollup -c rollup.config.js",
     "build:type": "tsc -p ./tsconfig.type.json",
+    "test:w": "jest --watch all",
     "test": "jest"
   },
   "devDependencies": {
