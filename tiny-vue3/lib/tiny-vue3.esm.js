@@ -406,7 +406,7 @@ function handleSetupResult(instance, setupResult) {
 }
 function finishComponentSetup(instance) {
     const Component = instance.type;
-    if (compiler && Component.render) {
+    if (compiler && !Component.render) {
         if (Component.template) {
             Component.render = compiler(Component.template);
         }
@@ -1071,7 +1071,7 @@ function genExpression(node, context) {
 function genInterpolation(node, context) {
     // Implement
     const { push, helper } = context;
-    push(`${helper[TO_DISPLAY_STRING]}(`);
+    push(`${helper(TO_DISPLAY_STRING)}(`);
     genNode(node.content, context);
     push(')');
 }
@@ -1255,11 +1255,9 @@ function traverseNode(node, context) {
 }
 function traverseChildren(node, context) {
     const children = node.children;
-    if (children) {
-        for (let i = 0; i < children.length; i++) {
-            const node = children[i];
-            traverseNode(node, context);
-        }
+    for (let i = 0; i < children.length; i++) {
+        const node = children[i];
+        traverseNode(node, context);
     }
 }
 
@@ -1304,10 +1302,10 @@ function isText(node) {
 }
 
 function transformText(node) {
-    let currentContainer;
     if (node.type === 2 /* ELEMENT */) {
         return () => {
             const { children } = node;
+            let currentContainer;
             for (let i = 0; i < children.length; i++) {
                 const child = children[i];
                 if (isText(child)) {

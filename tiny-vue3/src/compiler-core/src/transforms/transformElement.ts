@@ -1,11 +1,9 @@
-import { NodeTypes } from "../ast";
-import { createVNodeCall } from "../ast";
+import { createVNodeCall, NodeTypes } from "../ast";
 
 export function transformElement(node, context) {
   if (node.type === NodeTypes.ELEMENT) {
     return () => {
       // 中间处理层
-  
       // tag
       const vnodeTag = `'${node.tag}'`
   
@@ -16,7 +14,12 @@ export function transformElement(node, context) {
       const children = node.children
       let vnodeChildren = children[0]
   
-      node.codegenNode = createVNodeCall(context, vnodeTag, vnodeProps, vnodeChildren)
+      node.codegenNode = createVNodeCall(
+        context,
+        vnodeTag,
+        vnodeProps,
+        vnodeChildren
+      )
     }
   }
 }

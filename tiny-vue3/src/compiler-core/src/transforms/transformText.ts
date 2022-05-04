@@ -2,10 +2,11 @@ import { NodeTypes } from "../ast";
 import { isText } from "../utils";
 
 export function transformText(node) {
-  let currentContainer
   if (node.type === NodeTypes.ELEMENT) {
     return () => {
       const { children } = node
+      
+      let currentContainer
       for (let i = 0; i < children.length; i++) {
         const child = children[i];
         

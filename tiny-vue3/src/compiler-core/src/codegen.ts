@@ -124,7 +124,7 @@ function genExpression(node: any, context: any) {
 function genInterpolation(node: any, context: any) {
   // Implement
   const { push, helper } = context
-  push(`${helper[TO_DISPLAY_STRING]}(`)
+  push(`${helper(TO_DISPLAY_STRING)}(`)
   genNode(node.content, context)
   push(')')
 }

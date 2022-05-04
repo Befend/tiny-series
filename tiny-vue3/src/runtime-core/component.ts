@@ -6,7 +6,7 @@ import { initSlots } from "./componentSlots"
 import { proxyRefs } from "../reactivity"
 
 export function createComponentInstance(vnode, parent) {
-  console.log("createComponentInstance", parent);
+  console.log("createComponentInstance", parent)
   const component = {
     vnode,
     type: vnode.type,
@@ -34,7 +34,7 @@ function setupStatefulComponent(instance: any) {
   const Component = instance.type
 
   // ctx
-  instance.proxy = new Proxy({_: instance},  PublicInstanceProxyHandlers)
+  instance.proxy = new Proxy({_: instance}, PublicInstanceProxyHandlers)
 
   const { setup } = Component
 
@@ -59,9 +59,9 @@ function handleSetupResult(instance, setupResult: any) {
 
 function finishComponentSetup(instance: any) {
   const Component = instance.type
-  if (compiler && Component.render) {
+  if (compiler && !Component.render) {
     if (Component.template) {
-      Component.render = compiler(Component.template);
+      Component.render = compiler(Component.template)
     }
   }
 
@@ -78,8 +78,7 @@ export function setCurrentInstance(instance) {
   currentInstance = instance
 }
 
-let compiler;
-
+let compiler
 export function registerRuntimeCompiler(_compiler) {
-  compiler = _compiler;
+  compiler = _compiler
 }
