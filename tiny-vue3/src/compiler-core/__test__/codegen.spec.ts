@@ -2,6 +2,8 @@ import { baseParse } from "../src/parse"
 import { generate } from "../src/codegen";
 import { transform } from "../src/transform"
 import { transformExpression } from "../src/transforms/transformExpression";
+import { transformText } from "../src/transformText";
+import { transformElement } from "../src/transformElement";
 
 describe("codegen", () => {
   it("string", () => {
@@ -23,9 +25,9 @@ describe("codegen", () => {
   })
 
   it("element", () => {
-    const ast: any = baseParse("<div></div>")
+    const ast: any = baseParse("<div>hi,{{message}}</div>")
     transform(ast, {
-      nodeTransforms: [transformExpression]
+      nodeTransforms: [transformExpression, transformText, transformElement]
     })
 
     const { code } = generate(ast)
