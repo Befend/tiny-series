@@ -1,5 +1,5 @@
-import { NodeTypes } from "./ast";
-import { createVNodeCall } from "./ast";
+import { NodeTypes } from "../ast";
+import { createVNodeCall } from "../ast";
 
 export function transformElement(node, context) {
   if (node.type === NodeTypes.ELEMENT) {

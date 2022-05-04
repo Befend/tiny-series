@@ -1,5 +1,5 @@
-import { NodeTypes } from "./ast";
-import { isText } from "./utils";
+import { NodeTypes } from "../ast";
+import { isText } from "../utils";
 
 export function transformText(node) {
   let currentContainer

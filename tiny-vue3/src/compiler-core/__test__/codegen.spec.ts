@@ -2,8 +2,8 @@ import { baseParse } from "../src/parse"
 import { generate } from "../src/codegen";
 import { transform } from "../src/transform"
 import { transformExpression } from "../src/transforms/transformExpression";
-import { transformText } from "../src/transformText";
-import { transformElement } from "../src/transformElement";
+import { transformText } from "../src/transforms/transformText";
+import { transformElement } from "../src/transforms/transformElement";
 
 describe("codegen", () => {
   it("string", () => {

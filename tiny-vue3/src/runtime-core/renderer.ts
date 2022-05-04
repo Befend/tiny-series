@@ -1,4 +1,4 @@
-import { createComponentInstance, setupComponents } from "./components"
+import { createComponentInstance, setupComponents } from "./component"
 import { ShapeFlags } from "../shared/ShapeFlags"
 import { Fragment, Text } from "./vnode"
 import { createAppAPI } from "./createApp"
@@ -345,7 +345,7 @@ export function createRenderer(options) {
         // init
         console.log("init");
         const { proxy } = instance
-        const subTree = (instance.subTree = instance.render.call(proxy))
+        const subTree = (instance.subTree = instance.render.call(proxy, proxy))
         console.log(subTree);
         // vnode -> patch
         // vnode -> element -> mountElement
@@ -366,7 +366,7 @@ export function createRenderer(options) {
         }
 
         const { proxy } = instance
-        const subTree = instance.render.call(proxy)
+        const subTree = instance.render.call(proxy, proxy)
         const preSubTree = instance.subTree
         instance.subTree = subTree
 

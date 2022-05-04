@@ -1,4 +1,4 @@
-import { getCurrentInstance } from "./components";
+import { getCurrentInstance } from "./component";
 
 
 export function provide(key, value) {
