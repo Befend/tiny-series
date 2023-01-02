@@ -2,8 +2,8 @@
   "name": "tiny-vue3",
   "version": "1.0.0",
   "description": "A project about learning vue3 knowledge",
-  "main": "lib/tiny-vue3.cjs.js",
-  "module": "lib/tiny-vue3.esm.js",
+  "main": "./packages/vue/dist/tiny-vue3.cjs.js",
+  "module": "./packages/vue/dist/tiny-vue3.esm.js",
   "author": "chan",
   "license": "MIT",
   "scripts": {
