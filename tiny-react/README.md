@@ -4,13 +4,13 @@
 
 - [x] 实现`createElement`和`render`函数
 - [x] 实现`任务调度器requestIdleCallback`
-- [x] 实现简易的`fiber`
-- [x] 实现`functionComponent`
-- [x] 实现`事件绑定`
-- [x] 实现`props`
-- [x] 实现`diff更新`
-- [x] 实现`useState`
-- [x] 实现`useEffect`
+- [ ] 实现简易的`fiber`
+- [ ] 实现`functionComponent`
+- [ ] 实现`事件绑定`
+- [ ] 实现`props`
+- [ ] 实现`diff更新`
+- [ ] 实现`useState`
+- [ ] 实现`useEffect`
 
 ### 项目目录
 
