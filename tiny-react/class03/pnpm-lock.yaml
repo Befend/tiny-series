@@ -1,0 +1,1044 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      vite:
+        specifier: ^5.0.8
+        version: https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz
+      vitest:
+        specifier: ^1.2.0
+        version: https://registry.npmmirror.com/vitest/-/vitest-1.2.0.tgz
+
+packages:
+
+  '@esbuild/aix-ppc64@0.19.11':
+    resolution: {integrity: sha512-FnzU0LyE3ySQk7UntJO4+qIiQgI7KoODnZg5xzXIrFJlKd2P2gwHsHY4927xj9y5PJmJSzULiUCWmv7iWnNa7g==}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [aix]
+
+  '@esbuild/android-arm64@0.19.11':
+    resolution: {integrity: sha512-aiu7K/5JnLj//KOnOfEZ0D90obUkRzDMyqd/wNAUQ34m4YUPVhRZpnqKV9uqDGxT7cToSDnIHsGooyIczu9T+Q==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+
+  '@esbuild/android-arm@0.19.11':
+    resolution: {integrity: sha512-5OVapq0ClabvKvQ58Bws8+wkLCV+Rxg7tUVbo9xu034Nm536QTII4YzhaFriQ7rMrorfnFKUsArD2lqKbFY4vw==}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
+
+  '@esbuild/android-x64@0.19.11':
+    resolution: {integrity: sha512-eccxjlfGw43WYoY9QgB82SgGgDbibcqyDTlk3l3C0jOVHKxrjdc9CTwDUQd0vkvYg5um0OH+GpxYvp39r+IPOg==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+
+  '@esbuild/darwin-arm64@0.19.11':
+    resolution: {integrity: sha512-ETp87DRWuSt9KdDVkqSoKoLFHYTrkyz2+65fj9nfXsaV3bMhTCjtQfw3y+um88vGRKRiF7erPrh/ZuIdLUIVxQ==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@esbuild/darwin-x64@0.19.11':
+    resolution: {integrity: sha512-fkFUiS6IUK9WYUO/+22omwetaSNl5/A8giXvQlcinLIjVkxwTLSktbF5f/kJMftM2MJp9+fXqZ5ezS7+SALp4g==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@esbuild/freebsd-arm64@0.19.11':
+    resolution: {integrity: sha512-lhoSp5K6bxKRNdXUtHoNc5HhbXVCS8V0iZmDvyWvYq9S5WSfTIHU2UGjcGt7UeS6iEYp9eeymIl5mJBn0yiuxA==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+
+  '@esbuild/freebsd-x64@0.19.11':
+    resolution: {integrity: sha512-JkUqn44AffGXitVI6/AbQdoYAq0TEullFdqcMY/PCUZ36xJ9ZJRtQabzMA+Vi7r78+25ZIBosLTOKnUXBSi1Kw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@esbuild/linux-arm64@0.19.11':
+    resolution: {integrity: sha512-LneLg3ypEeveBSMuoa0kwMpCGmpu8XQUh+mL8XXwoYZ6Be2qBnVtcDI5azSvh7vioMDhoJFZzp9GWp9IWpYoUg==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@esbuild/linux-arm@0.19.11':
+    resolution: {integrity: sha512-3CRkr9+vCV2XJbjwgzjPtO8T0SZUmRZla+UL1jw+XqHZPkPgZiyWvbDvl9rqAN8Zl7qJF0O/9ycMtjU67HN9/Q==}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+
+  '@esbuild/linux-ia32@0.19.11':
+    resolution: {integrity: sha512-caHy++CsD8Bgq2V5CodbJjFPEiDPq8JJmBdeyZ8GWVQMjRD0sU548nNdwPNvKjVpamYYVL40AORekgfIubwHoA==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+
+  '@esbuild/linux-loong64@0.19.11':
+    resolution: {integrity: sha512-ppZSSLVpPrwHccvC6nQVZaSHlFsvCQyjnvirnVjbKSHuE5N24Yl8F3UwYUUR1UEPaFObGD2tSvVKbvR+uT1Nrg==}
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+
+  '@esbuild/linux-mips64el@0.19.11':
+    resolution: {integrity: sha512-B5x9j0OgjG+v1dF2DkH34lr+7Gmv0kzX6/V0afF41FkPMMqaQ77pH7CrhWeR22aEeHKaeZVtZ6yFwlxOKPVFyg==}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+
+  '@esbuild/linux-ppc64@0.19.11':
+    resolution: {integrity: sha512-MHrZYLeCG8vXblMetWyttkdVRjQlQUb/oMgBNurVEnhj4YWOr4G5lmBfZjHYQHHN0g6yDmCAQRR8MUHldvvRDA==}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+
+  '@esbuild/linux-riscv64@0.19.11':
+    resolution: {integrity: sha512-f3DY++t94uVg141dozDu4CCUkYW+09rWtaWfnb3bqe4w5NqmZd6nPVBm+qbz7WaHZCoqXqHz5p6CM6qv3qnSSQ==}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+
+  '@esbuild/linux-s390x@0.19.11':
+    resolution: {integrity: sha512-A5xdUoyWJHMMlcSMcPGVLzYzpcY8QP1RtYzX5/bS4dvjBGVxdhuiYyFwp7z74ocV7WDc0n1harxmpq2ePOjI0Q==}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+
+  '@esbuild/linux-x64@0.19.11':
+    resolution: {integrity: sha512-grbyMlVCvJSfxFQUndw5mCtWs5LO1gUlwP4CDi4iJBbVpZcqLVT29FxgGuBJGSzyOxotFG4LoO5X+M1350zmPA==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+
+  '@esbuild/netbsd-x64@0.19.11':
+    resolution: {integrity: sha512-13jvrQZJc3P230OhU8xgwUnDeuC/9egsjTkXN49b3GcS5BKvJqZn86aGM8W9pd14Kd+u7HuFBMVtrNGhh6fHEQ==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+
+  '@esbuild/openbsd-x64@0.19.11':
+    resolution: {integrity: sha512-ysyOGZuTp6SNKPE11INDUeFVVQFrhcNDVUgSQVDzqsqX38DjhPEPATpid04LCoUr2WXhQTEZ8ct/EgJCUDpyNw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+
+  '@esbuild/sunos-x64@0.19.11':
+    resolution: {integrity: sha512-Hf+Sad9nVwvtxy4DXCZQqLpgmRTQqyFyhT3bZ4F2XlJCjxGmRFF0Shwn9rzhOYRB61w9VMXUkxlBy56dk9JJiQ==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+
+  '@esbuild/win32-arm64@0.19.11':
+    resolution: {integrity: sha512-0P58Sbi0LctOMOQbpEOvOL44Ne0sqbS0XWHMvvrg6NE5jQ1xguCSSw9jQeUk2lfrXYsKDdOe6K+oZiwKPilYPQ==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@esbuild/win32-ia32@0.19.11':
+    resolution: {integrity: sha512-6YOrWS+sDJDmshdBIQU+Uoyh7pQKrdykdefC1avn76ss5c+RN6gut3LZA4E2cH5xUEp5/cA0+YxRaVtRAb0xBg==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@esbuild/win32-x64@0.19.11':
+    resolution: {integrity: sha512-vfkhltrjCAb603XaFhqhAF4LGDi2M4OrCRrFusyQ+iTLQ/o60QQXxc9cZC/FFpihBI9N1Grn6SMKVJ4KP7Fuiw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+
+  '@jest/schemas@https://registry.npmmirror.com/@jest/schemas/-/schemas-29.6.3.tgz':
+    resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
+    version: 29.6.3
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  '@jridgewell/sourcemap-codec@https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz':
+    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
+    version: 1.4.15
+
+  '@rollup/rollup-android-arm-eabi@4.9.5':
+    resolution: {integrity: sha512-idWaG8xeSRCfRq9KpRysDHJ/rEHBEXcHuJ82XY0yYFIWnLMjZv9vF/7DOq8djQ2n3Lk6+3qfSH8AqlmHlmi1MA==}
+    cpu: [arm]
+    os: [android]
+
+  '@rollup/rollup-android-arm64@4.9.5':
+    resolution: {integrity: sha512-f14d7uhAMtsCGjAYwZGv6TwuS3IFaM4ZnGMUn3aCBgkcHAYErhV1Ad97WzBvS2o0aaDv4mVz+syiN0ElMyfBPg==}
+    cpu: [arm64]
+    os: [android]
+
+  '@rollup/rollup-darwin-arm64@4.9.5':
+    resolution: {integrity: sha512-ndoXeLx455FffL68OIUrVr89Xu1WLzAG4n65R8roDlCoYiQcGGg6MALvs2Ap9zs7AHg8mpHtMpwC8jBBjZrT/w==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@rollup/rollup-darwin-x64@4.9.5':
+    resolution: {integrity: sha512-UmElV1OY2m/1KEEqTlIjieKfVwRg0Zwg4PLgNf0s3glAHXBN99KLpw5A5lrSYCa1Kp63czTpVll2MAqbZYIHoA==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.9.5':
+    resolution: {integrity: sha512-Q0LcU61v92tQB6ae+udZvOyZ0wfpGojtAKrrpAaIqmJ7+psq4cMIhT/9lfV6UQIpeItnq/2QDROhNLo00lOD1g==}
+    cpu: [arm]
+    os: [linux]
+
+  '@rollup/rollup-linux-arm64-gnu@4.9.5':
+    resolution: {integrity: sha512-dkRscpM+RrR2Ee3eOQmRWFjmV/payHEOrjyq1VZegRUa5OrZJ2MAxBNs05bZuY0YCtpqETDy1Ix4i/hRqX98cA==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-arm64-musl@4.9.5':
+    resolution: {integrity: sha512-QaKFVOzzST2xzY4MAmiDmURagWLFh+zZtttuEnuNn19AiZ0T3fhPyjPPGwLNdiDT82ZE91hnfJsUiDwF9DClIQ==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-linux-riscv64-gnu@4.9.5':
+    resolution: {integrity: sha512-HeGqmRJuyVg6/X6MpE2ur7GbymBPS8Np0S/vQFHDmocfORT+Zt76qu+69NUoxXzGqVP1pzaY6QIi0FJWLC3OPA==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-x64-gnu@4.9.5':
+    resolution: {integrity: sha512-Dq1bqBdLaZ1Gb/l2e5/+o3B18+8TI9ANlA1SkejZqDgdU/jK/ThYaMPMJpVMMXy2uRHvGKbkz9vheVGdq3cJfA==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rollup/rollup-linux-x64-musl@4.9.5':
+    resolution: {integrity: sha512-ezyFUOwldYpj7AbkwyW9AJ203peub81CaAIVvckdkyH8EvhEIoKzaMFJj0G4qYJ5sw3BpqhFrsCc30t54HV8vg==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@rollup/rollup-win32-arm64-msvc@4.9.5':
+    resolution: {integrity: sha512-aHSsMnUw+0UETB0Hlv7B/ZHOGY5bQdwMKJSzGfDfvyhnpmVxLMGnQPGNE9wgqkLUs3+gbG1Qx02S2LLfJ5GaRQ==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@rollup/rollup-win32-ia32-msvc@4.9.5':
+    resolution: {integrity: sha512-AiqiLkb9KSf7Lj/o1U3SEP9Zn+5NuVKgFdRIZkvd4N0+bYrTOovVd0+LmYCPQGbocT4kvFyK+LXCDiXPBF3fyA==}
+    cpu: [ia32]
+    os: [win32]
+
+  '@rollup/rollup-win32-x64-msvc@4.9.5':
+    resolution: {integrity: sha512-1q+mykKE3Vot1kaFJIDoUFv5TuW+QQVaf2FmTT9krg86pQrGStOSJJ0Zil7CFagyxDuouTepzt5Y5TVzyajOdQ==}
+    cpu: [x64]
+    os: [win32]
+
+  '@sinclair/typebox@https://registry.npmmirror.com/@sinclair/typebox/-/typebox-0.27.8.tgz':
+    resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+    version: 0.27.8
+
+  '@types/estree@https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz':
+    resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+    version: 1.0.5
+
+  '@vitest/expect@https://registry.npmmirror.com/@vitest/expect/-/expect-1.2.0.tgz':
+    resolution: {integrity: sha512-H+2bHzhyvgp32o7Pgj2h9RTHN0pgYaoi26Oo3mE+dCi1PAqV31kIIVfTbqMO3Bvshd5mIrJLc73EwSRrbol9Lw==}
+    version: 1.2.0
+
+  '@vitest/runner@https://registry.npmmirror.com/@vitest/runner/-/runner-1.2.0.tgz':
+    resolution: {integrity: sha512-vaJkDoQaNUTroT70OhM0NPznP7H3WyRwt4LvGwCVYs/llLaqhoSLnlIhUClZpbF5RgAee29KRcNz0FEhYcgxqA==}
+    version: 1.2.0
+
+  '@vitest/snapshot@https://registry.npmmirror.com/@vitest/snapshot/-/snapshot-1.2.0.tgz':
+    resolution: {integrity: sha512-P33EE7TrVgB3HDLllrjK/GG6WSnmUtWohbwcQqmm7TAk9AVHpdgf7M3F3qRHKm6vhr7x3eGIln7VH052Smo6Kw==}
+    version: 1.2.0
+
+  '@vitest/spy@https://registry.npmmirror.com/@vitest/spy/-/spy-1.2.0.tgz':
+    resolution: {integrity: sha512-MNxSAfxUaCeowqyyGwC293yZgk7cECZU9wGb8N1pYQ0yOn/SIr8t0l9XnGRdQZvNV/ZHBYu6GO/W3tj5K3VN1Q==}
+    version: 1.2.0
+
+  '@vitest/utils@https://registry.npmmirror.com/@vitest/utils/-/utils-1.2.0.tgz':
+    resolution: {integrity: sha512-FyD5bpugsXlwVpTcGLDf3wSPYy8g541fQt14qtzo8mJ4LdEpDKZ9mQy2+qdJm2TZRpjY5JLXihXCgIxiRJgi5g==}
+    version: 1.2.0
+
+  acorn-walk@https://registry.npmmirror.com/acorn-walk/-/acorn-walk-8.3.2.tgz:
+    resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
+    version: 8.3.2
+    engines: {node: '>=0.4.0'}
+
+  acorn@https://registry.npmmirror.com/acorn/-/acorn-8.11.3.tgz:
+    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+    version: 8.11.3
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  ansi-styles@https://registry.npmmirror.com/ansi-styles/-/ansi-styles-5.2.0.tgz:
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    version: 5.2.0
+    engines: {node: '>=10'}
+
+  assertion-error@https://registry.npmmirror.com/assertion-error/-/assertion-error-1.1.0.tgz:
+    resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
+    version: 1.1.0
+
+  cac@https://registry.npmmirror.com/cac/-/cac-6.7.14.tgz:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
+    version: 6.7.14
+    engines: {node: '>=8'}
+
+  chai@https://registry.npmmirror.com/chai/-/chai-4.4.1.tgz:
+    resolution: {integrity: sha512-13sOfMv2+DWduEU+/xbun3LScLoqN17nBeTLUsmDfKdoiC1fr0n9PU4guu4AhRcOVFk/sW8LyZWHuhWtQZiF+g==}
+    version: 4.4.1
+    engines: {node: '>=4'}
+
+  check-error@https://registry.npmmirror.com/check-error/-/check-error-1.0.3.tgz:
+    resolution: {integrity: sha512-iKEoDYaRmd1mxM90a2OEfWhjsjPpYPuQ+lMYsoxB126+t8fw7ySEO48nmDg5COTjxDI65/Y2OWpeEHk3ZOe8zg==}
+    version: 1.0.3
+
+  cross-spawn@https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz:
+    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
+    version: 7.0.3
+    engines: {node: '>= 8'}
+
+  debug@https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    version: 4.3.4
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
+  deep-eql@https://registry.npmmirror.com/deep-eql/-/deep-eql-4.1.3.tgz:
+    resolution: {integrity: sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw==}
+    version: 4.1.3
+    engines: {node: '>=6'}
+
+  diff-sequences@https://registry.npmmirror.com/diff-sequences/-/diff-sequences-29.6.3.tgz:
+    resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
+    version: 29.6.3
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.19.11.tgz:
+    resolution: {integrity: sha512-HJ96Hev2hX/6i5cDVwcqiJBBtuo9+FeIJOtZ9W1kA5M6AMJRHUZlpYZ1/SbEwtO0ioNAW8rUooVpC/WehY2SfA==}
+    version: 0.19.11
+    engines: {node: '>=12'}
+    hasBin: true
+
+  estree-walker@https://registry.npmmirror.com/estree-walker/-/estree-walker-3.0.3.tgz:
+    resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
+    version: 3.0.3
+
+  execa@https://registry.npmmirror.com/execa/-/execa-8.0.1.tgz:
+    resolution: {integrity: sha512-VyhnebXciFV2DESc+p6B+y0LjSm0krU4OgJN44qFAhBY0TJ+1V61tYD2+wHusZ6F9n5K+vl8k0sTy7PEfV4qpg==}
+    version: 8.0.1
+    engines: {node: '>=16.17'}
+
+  fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+
+  get-func-name@https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz:
+    resolution: {integrity: sha512-8vXOvuE167CtIc3OyItco7N/dpRtBbYOsPsXCz7X/PMnlGjYjSGuZJgM1Y7mmew7BKf9BqvLX2tnOVy1BBUsxQ==}
+    version: 2.0.2
+
+  get-stream@https://registry.npmmirror.com/get-stream/-/get-stream-8.0.1.tgz:
+    resolution: {integrity: sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==}
+    version: 8.0.1
+    engines: {node: '>=16'}
+
+  human-signals@https://registry.npmmirror.com/human-signals/-/human-signals-5.0.0.tgz:
+    resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
+    version: 5.0.0
+    engines: {node: '>=16.17.0'}
+
+  is-stream@https://registry.npmmirror.com/is-stream/-/is-stream-3.0.0.tgz:
+    resolution: {integrity: sha512-LnQR4bZ9IADDRSkvpqMGvt/tEJWclzklNgSw48V5EAaAeDd6qGvN8ei6k5p0tvxSR171VmGyHuTiAOfxAbr8kA==}
+    version: 3.0.0
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  isexe@https://registry.npmmirror.com/isexe/-/isexe-2.0.0.tgz:
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+    version: 2.0.0
+
+  jsonc-parser@https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    version: 3.2.0
+
+  local-pkg@https://registry.npmmirror.com/local-pkg/-/local-pkg-0.5.0.tgz:
+    resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
+    version: 0.5.0
+    engines: {node: '>=14'}
+
+  loupe@https://registry.npmmirror.com/loupe/-/loupe-2.3.7.tgz:
+    resolution: {integrity: sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==}
+    version: 2.3.7
+
+  magic-string@https://registry.npmmirror.com/magic-string/-/magic-string-0.30.5.tgz:
+    resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
+    version: 0.30.5
+    engines: {node: '>=12'}
+
+  merge-stream@https://registry.npmmirror.com/merge-stream/-/merge-stream-2.0.0.tgz:
+    resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
+    version: 2.0.0
+
+  mimic-fn@https://registry.npmmirror.com/mimic-fn/-/mimic-fn-4.0.0.tgz:
+    resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
+    version: 4.0.0
+    engines: {node: '>=12'}
+
+  mlly@https://registry.npmmirror.com/mlly/-/mlly-1.5.0.tgz:
+    resolution: {integrity: sha512-NPVQvAY1xr1QoVeG0cy8yUYC7FQcOx6evl/RjT1wL5FvzPnzOysoqB/jmx/DhssT2dYa8nxECLAaFI/+gVLhDQ==}
+    version: 1.5.0
+
+  ms@https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz:
+    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    version: 2.1.2
+
+  nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.7.tgz:
+    resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
+    version: 3.3.7
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+
+  npm-run-path@https://registry.npmmirror.com/npm-run-path/-/npm-run-path-5.2.0.tgz:
+    resolution: {integrity: sha512-W4/tgAXFqFA0iL7fk0+uQ3g7wkL8xJmx3XdK0VGb4cHW//eZTtKGvFBBoRKVTpY7n6ze4NL9ly7rgXcHufqXKg==}
+    version: 5.2.0
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  onetime@https://registry.npmmirror.com/onetime/-/onetime-6.0.0.tgz:
+    resolution: {integrity: sha512-1FlR+gjXK7X+AsAHso35MnyN5KqGwJRi/31ft6x0M194ht7S+rWAvd7PHss9xSKMzE0asv1pyIHaJYq+BbacAQ==}
+    version: 6.0.0
+    engines: {node: '>=12'}
+
+  p-limit@https://registry.npmmirror.com/p-limit/-/p-limit-5.0.0.tgz:
+    resolution: {integrity: sha512-/Eaoq+QyLSiXQ4lyYV23f14mZRQcXnxfHrN0vCai+ak9G0pp9iEQukIIZq5NccEvwRB8PUnZT0KsOoDCINS1qQ==}
+    version: 5.0.0
+    engines: {node: '>=18'}
+
+  path-key@https://registry.npmmirror.com/path-key/-/path-key-3.1.1.tgz:
+    resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
+    version: 3.1.1
+    engines: {node: '>=8'}
+
+  path-key@https://registry.npmmirror.com/path-key/-/path-key-4.0.0.tgz:
+    resolution: {integrity: sha512-haREypq7xkM7ErfgIyA0z+Bj4AGKlMSdlQE2jvJo6huWD1EdkKYV+G/T4nq0YEF2vgTT8kqMFKo1uHn950r4SQ==}
+    version: 4.0.0
+    engines: {node: '>=12'}
+
+  pathe@https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz:
+    resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
+    version: 1.1.2
+
+  pathval@https://registry.npmmirror.com/pathval/-/pathval-1.1.1.tgz:
+    resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
+    version: 1.1.1
+
+  picocolors@https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz:
+    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+    version: 1.0.0
+
+  pkg-types@https://registry.npmmirror.com/pkg-types/-/pkg-types-1.0.3.tgz:
+    resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
+    version: 1.0.3
+
+  postcss@https://registry.npmmirror.com/postcss/-/postcss-8.4.33.tgz:
+    resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
+    version: 8.4.33
+    engines: {node: ^10 || ^12 || >=14}
+
+  pretty-format@https://registry.npmmirror.com/pretty-format/-/pretty-format-29.7.0.tgz:
+    resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
+    version: 29.7.0
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  react-is@https://registry.npmmirror.com/react-is/-/react-is-18.2.0.tgz:
+    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    version: 18.2.0
+
+  rollup@https://registry.npmmirror.com/rollup/-/rollup-4.9.5.tgz:
+    resolution: {integrity: sha512-E4vQW0H/mbNMw2yLSqJyjtkHY9dslf/p0zuT1xehNRqUTBOFMqEjguDvqhXr7N7r/4ttb2jr4T41d3dncmIgbQ==}
+    version: 4.9.5
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
+  shebang-command@https://registry.npmmirror.com/shebang-command/-/shebang-command-2.0.0.tgz:
+    resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
+    version: 2.0.0
+    engines: {node: '>=8'}
+
+  shebang-regex@https://registry.npmmirror.com/shebang-regex/-/shebang-regex-3.0.0.tgz:
+    resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
+    version: 3.0.0
+    engines: {node: '>=8'}
+
+  siginfo@https://registry.npmmirror.com/siginfo/-/siginfo-2.0.0.tgz:
+    resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
+    version: 2.0.0
+
+  signal-exit@https://registry.npmmirror.com/signal-exit/-/signal-exit-4.1.0.tgz:
+    resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
+    version: 4.1.0
+    engines: {node: '>=14'}
+
+  source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz:
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
+    version: 1.0.2
+    engines: {node: '>=0.10.0'}
+
+  stackback@https://registry.npmmirror.com/stackback/-/stackback-0.0.2.tgz:
+    resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
+    version: 0.0.2
+
+  std-env@https://registry.npmmirror.com/std-env/-/std-env-3.7.0.tgz:
+    resolution: {integrity: sha512-JPbdCEQLj1w5GilpiHAx3qJvFndqybBysA3qUOnznweH4QbNYUsW/ea8QzSrnh0vNsezMMw5bcVool8lM0gwzg==}
+    version: 3.7.0
+
+  strip-final-newline@https://registry.npmmirror.com/strip-final-newline/-/strip-final-newline-3.0.0.tgz:
+    resolution: {integrity: sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==}
+    version: 3.0.0
+    engines: {node: '>=12'}
+
+  strip-literal@https://registry.npmmirror.com/strip-literal/-/strip-literal-1.3.0.tgz:
+    resolution: {integrity: sha512-PugKzOsyXpArk0yWmUwqOZecSO0GH0bPoctLcqNDH9J04pVW3lflYE0ujElBGTloevcxF5MofAOZ7C5l2b+wLg==}
+    version: 1.3.0
+
+  tinybench@https://registry.npmmirror.com/tinybench/-/tinybench-2.5.1.tgz:
+    resolution: {integrity: sha512-65NKvSuAVDP/n4CqH+a9w2kTlLReS9vhsAP06MWx+/89nMinJyB2icyl58RIcqCmIggpojIGeuJGhjU1aGMBSg==}
+    version: 2.5.1
+
+  tinypool@https://registry.npmmirror.com/tinypool/-/tinypool-0.8.1.tgz:
+    resolution: {integrity: sha512-zBTCK0cCgRROxvs9c0CGK838sPkeokNGdQVUUwHAbynHFlmyJYj825f/oRs528HaIJ97lo0pLIlDUzwN+IorWg==}
+    version: 0.8.1
+    engines: {node: '>=14.0.0'}
+
+  tinyspy@https://registry.npmmirror.com/tinyspy/-/tinyspy-2.2.0.tgz:
+    resolution: {integrity: sha512-d2eda04AN/cPOR89F7Xv5bK/jrQEhmcLFe6HFldoeO9AJtps+fqEnh486vnT/8y4bw38pSyxDcTCAq+Ks2aJTg==}
+    version: 2.2.0
+    engines: {node: '>=14.0.0'}
+
+  type-detect@https://registry.npmmirror.com/type-detect/-/type-detect-4.0.8.tgz:
+    resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
+    version: 4.0.8
+    engines: {node: '>=4'}
+
+  ufo@https://registry.npmmirror.com/ufo/-/ufo-1.3.2.tgz:
+    resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
+    version: 1.3.2
+
+  vite-node@https://registry.npmmirror.com/vite-node/-/vite-node-1.2.0.tgz:
+    resolution: {integrity: sha512-ETnQTHeAbbOxl7/pyBck9oAPZZZo+kYnFt1uQDD+hPReOc+wCjXw4r4jHriBRuVDB5isHmPXxrfc1yJnfBERqg==}
+    version: 1.2.0
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+
+  vite@https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz:
+    resolution: {integrity: sha512-jYMALd8aeqR3yS9xlHd0OzQJndS9fH5ylVgWdB+pxTwxLKdO1pgC5Dlb398BUxpfaBxa4M9oT7j1g503Gaj5IQ==}
+    version: 5.0.8
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
+  vitest@https://registry.npmmirror.com/vitest/-/vitest-1.2.0.tgz:
+    resolution: {integrity: sha512-Ixs5m7BjqvLHXcibkzKRQUvD/XLw0E3rvqaCMlrm/0LMsA0309ZqYvTlPzkhh81VlEyVZXFlwWnkhb6/UMtcaQ==}
+    version: 1.2.0
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@edge-runtime/vm': '*'
+      '@types/node': ^18.0.0 || >=20.0.0
+      '@vitest/browser': ^1.0.0
+      '@vitest/ui': ^1.0.0
+      happy-dom: '*'
+      jsdom: '*'
+    peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
+      '@types/node':
+        optional: true
+      '@vitest/browser':
+        optional: true
+      '@vitest/ui':
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+
+  which@https://registry.npmmirror.com/which/-/which-2.0.2.tgz:
+    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
+    version: 2.0.2
+    engines: {node: '>= 8'}
+    hasBin: true
+
+  why-is-node-running@https://registry.npmmirror.com/why-is-node-running/-/why-is-node-running-2.2.2.tgz:
+    resolution: {integrity: sha512-6tSwToZxTOcotxHeA+qGCq1mVzKR3CwcJGmVcY+QE8SHy6TnpFnh8PAvPNHYr7EcuVeG0QSMxtYCuO1ta/G/oA==}
+    version: 2.2.2
+    engines: {node: '>=8'}
+    hasBin: true
+
+  yocto-queue@https://registry.npmmirror.com/yocto-queue/-/yocto-queue-1.0.0.tgz:
+    resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
+    version: 1.0.0
+    engines: {node: '>=12.20'}
+
+snapshots:
+
+  '@esbuild/aix-ppc64@0.19.11':
+    optional: true
+
+  '@esbuild/android-arm64@0.19.11':
+    optional: true
+
+  '@esbuild/android-arm@0.19.11':
+    optional: true
+
+  '@esbuild/android-x64@0.19.11':
+    optional: true
+
+  '@esbuild/darwin-arm64@0.19.11':
+    optional: true
+
+  '@esbuild/darwin-x64@0.19.11':
+    optional: true
+
+  '@esbuild/freebsd-arm64@0.19.11':
+    optional: true
+
+  '@esbuild/freebsd-x64@0.19.11':
+    optional: true
+
+  '@esbuild/linux-arm64@0.19.11':
+    optional: true
+
+  '@esbuild/linux-arm@0.19.11':
+    optional: true
+
+  '@esbuild/linux-ia32@0.19.11':
+    optional: true
+
+  '@esbuild/linux-loong64@0.19.11':
+    optional: true
+
+  '@esbuild/linux-mips64el@0.19.11':
+    optional: true
+
+  '@esbuild/linux-ppc64@0.19.11':
+    optional: true
+
+  '@esbuild/linux-riscv64@0.19.11':
+    optional: true
+
+  '@esbuild/linux-s390x@0.19.11':
+    optional: true
+
+  '@esbuild/linux-x64@0.19.11':
+    optional: true
+
+  '@esbuild/netbsd-x64@0.19.11':
+    optional: true
+
+  '@esbuild/openbsd-x64@0.19.11':
+    optional: true
+
+  '@esbuild/sunos-x64@0.19.11':
+    optional: true
+
+  '@esbuild/win32-arm64@0.19.11':
+    optional: true
+
+  '@esbuild/win32-ia32@0.19.11':
+    optional: true
+
+  '@esbuild/win32-x64@0.19.11':
+    optional: true
+
+  '@jest/schemas@https://registry.npmmirror.com/@jest/schemas/-/schemas-29.6.3.tgz':
+    dependencies:
+      '@sinclair/typebox': https://registry.npmmirror.com/@sinclair/typebox/-/typebox-0.27.8.tgz
+
+  '@jridgewell/sourcemap-codec@https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz': {}
+
+  '@rollup/rollup-android-arm-eabi@4.9.5':
+    optional: true
+
+  '@rollup/rollup-android-arm64@4.9.5':
+    optional: true
+
+  '@rollup/rollup-darwin-arm64@4.9.5':
+    optional: true
+
+  '@rollup/rollup-darwin-x64@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-gnu@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-musl@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-riscv64-gnu@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-x64-gnu@4.9.5':
+    optional: true
+
+  '@rollup/rollup-linux-x64-musl@4.9.5':
+    optional: true
+
+  '@rollup/rollup-win32-arm64-msvc@4.9.5':
+    optional: true
+
+  '@rollup/rollup-win32-ia32-msvc@4.9.5':
+    optional: true
+
+  '@rollup/rollup-win32-x64-msvc@4.9.5':
+    optional: true
+
+  '@sinclair/typebox@https://registry.npmmirror.com/@sinclair/typebox/-/typebox-0.27.8.tgz': {}
+
+  '@types/estree@https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz': {}
+
+  '@vitest/expect@https://registry.npmmirror.com/@vitest/expect/-/expect-1.2.0.tgz':
+    dependencies:
+      '@vitest/spy': https://registry.npmmirror.com/@vitest/spy/-/spy-1.2.0.tgz
+      '@vitest/utils': https://registry.npmmirror.com/@vitest/utils/-/utils-1.2.0.tgz
+      chai: https://registry.npmmirror.com/chai/-/chai-4.4.1.tgz
+
+  '@vitest/runner@https://registry.npmmirror.com/@vitest/runner/-/runner-1.2.0.tgz':
+    dependencies:
+      '@vitest/utils': https://registry.npmmirror.com/@vitest/utils/-/utils-1.2.0.tgz
+      p-limit: https://registry.npmmirror.com/p-limit/-/p-limit-5.0.0.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+
+  '@vitest/snapshot@https://registry.npmmirror.com/@vitest/snapshot/-/snapshot-1.2.0.tgz':
+    dependencies:
+      magic-string: https://registry.npmmirror.com/magic-string/-/magic-string-0.30.5.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+      pretty-format: https://registry.npmmirror.com/pretty-format/-/pretty-format-29.7.0.tgz
+
+  '@vitest/spy@https://registry.npmmirror.com/@vitest/spy/-/spy-1.2.0.tgz':
+    dependencies:
+      tinyspy: https://registry.npmmirror.com/tinyspy/-/tinyspy-2.2.0.tgz
+
+  '@vitest/utils@https://registry.npmmirror.com/@vitest/utils/-/utils-1.2.0.tgz':
+    dependencies:
+      diff-sequences: https://registry.npmmirror.com/diff-sequences/-/diff-sequences-29.6.3.tgz
+      estree-walker: https://registry.npmmirror.com/estree-walker/-/estree-walker-3.0.3.tgz
+      loupe: https://registry.npmmirror.com/loupe/-/loupe-2.3.7.tgz
+      pretty-format: https://registry.npmmirror.com/pretty-format/-/pretty-format-29.7.0.tgz
+
+  acorn-walk@https://registry.npmmirror.com/acorn-walk/-/acorn-walk-8.3.2.tgz: {}
+
+  acorn@https://registry.npmmirror.com/acorn/-/acorn-8.11.3.tgz: {}
+
+  ansi-styles@https://registry.npmmirror.com/ansi-styles/-/ansi-styles-5.2.0.tgz: {}
+
+  assertion-error@https://registry.npmmirror.com/assertion-error/-/assertion-error-1.1.0.tgz: {}
+
+  cac@https://registry.npmmirror.com/cac/-/cac-6.7.14.tgz: {}
+
+  chai@https://registry.npmmirror.com/chai/-/chai-4.4.1.tgz:
+    dependencies:
+      assertion-error: https://registry.npmmirror.com/assertion-error/-/assertion-error-1.1.0.tgz
+      check-error: https://registry.npmmirror.com/check-error/-/check-error-1.0.3.tgz
+      deep-eql: https://registry.npmmirror.com/deep-eql/-/deep-eql-4.1.3.tgz
+      get-func-name: https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz
+      loupe: https://registry.npmmirror.com/loupe/-/loupe-2.3.7.tgz
+      pathval: https://registry.npmmirror.com/pathval/-/pathval-1.1.1.tgz
+      type-detect: https://registry.npmmirror.com/type-detect/-/type-detect-4.0.8.tgz
+
+  check-error@https://registry.npmmirror.com/check-error/-/check-error-1.0.3.tgz:
+    dependencies:
+      get-func-name: https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz
+
+  cross-spawn@https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz:
+    dependencies:
+      path-key: https://registry.npmmirror.com/path-key/-/path-key-3.1.1.tgz
+      shebang-command: https://registry.npmmirror.com/shebang-command/-/shebang-command-2.0.0.tgz
+      which: https://registry.npmmirror.com/which/-/which-2.0.2.tgz
+
+  debug@https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz:
+    dependencies:
+      ms: https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz
+
+  deep-eql@https://registry.npmmirror.com/deep-eql/-/deep-eql-4.1.3.tgz:
+    dependencies:
+      type-detect: https://registry.npmmirror.com/type-detect/-/type-detect-4.0.8.tgz
+
+  diff-sequences@https://registry.npmmirror.com/diff-sequences/-/diff-sequences-29.6.3.tgz: {}
+
+  esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.19.11.tgz:
+    optionalDependencies:
+      '@esbuild/aix-ppc64': 0.19.11
+      '@esbuild/android-arm': 0.19.11
+      '@esbuild/android-arm64': 0.19.11
+      '@esbuild/android-x64': 0.19.11
+      '@esbuild/darwin-arm64': 0.19.11
+      '@esbuild/darwin-x64': 0.19.11
+      '@esbuild/freebsd-arm64': 0.19.11
+      '@esbuild/freebsd-x64': 0.19.11
+      '@esbuild/linux-arm': 0.19.11
+      '@esbuild/linux-arm64': 0.19.11
+      '@esbuild/linux-ia32': 0.19.11
+      '@esbuild/linux-loong64': 0.19.11
+      '@esbuild/linux-mips64el': 0.19.11
+      '@esbuild/linux-ppc64': 0.19.11
+      '@esbuild/linux-riscv64': 0.19.11
+      '@esbuild/linux-s390x': 0.19.11
+      '@esbuild/linux-x64': 0.19.11
+      '@esbuild/netbsd-x64': 0.19.11
+      '@esbuild/openbsd-x64': 0.19.11
+      '@esbuild/sunos-x64': 0.19.11
+      '@esbuild/win32-arm64': 0.19.11
+      '@esbuild/win32-ia32': 0.19.11
+      '@esbuild/win32-x64': 0.19.11
+
+  estree-walker@https://registry.npmmirror.com/estree-walker/-/estree-walker-3.0.3.tgz:
+    dependencies:
+      '@types/estree': https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz
+
+  execa@https://registry.npmmirror.com/execa/-/execa-8.0.1.tgz:
+    dependencies:
+      cross-spawn: https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz
+      get-stream: https://registry.npmmirror.com/get-stream/-/get-stream-8.0.1.tgz
+      human-signals: https://registry.npmmirror.com/human-signals/-/human-signals-5.0.0.tgz
+      is-stream: https://registry.npmmirror.com/is-stream/-/is-stream-3.0.0.tgz
+      merge-stream: https://registry.npmmirror.com/merge-stream/-/merge-stream-2.0.0.tgz
+      npm-run-path: https://registry.npmmirror.com/npm-run-path/-/npm-run-path-5.2.0.tgz
+      onetime: https://registry.npmmirror.com/onetime/-/onetime-6.0.0.tgz
+      signal-exit: https://registry.npmmirror.com/signal-exit/-/signal-exit-4.1.0.tgz
+      strip-final-newline: https://registry.npmmirror.com/strip-final-newline/-/strip-final-newline-3.0.0.tgz
+
+  fsevents@2.3.3:
+    optional: true
+
+  get-func-name@https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz: {}
+
+  get-stream@https://registry.npmmirror.com/get-stream/-/get-stream-8.0.1.tgz: {}
+
+  human-signals@https://registry.npmmirror.com/human-signals/-/human-signals-5.0.0.tgz: {}
+
+  is-stream@https://registry.npmmirror.com/is-stream/-/is-stream-3.0.0.tgz: {}
+
+  isexe@https://registry.npmmirror.com/isexe/-/isexe-2.0.0.tgz: {}
+
+  jsonc-parser@https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz: {}
+
+  local-pkg@https://registry.npmmirror.com/local-pkg/-/local-pkg-0.5.0.tgz:
+    dependencies:
+      mlly: https://registry.npmmirror.com/mlly/-/mlly-1.5.0.tgz
+      pkg-types: https://registry.npmmirror.com/pkg-types/-/pkg-types-1.0.3.tgz
+
+  loupe@https://registry.npmmirror.com/loupe/-/loupe-2.3.7.tgz:
+    dependencies:
+      get-func-name: https://registry.npmmirror.com/get-func-name/-/get-func-name-2.0.2.tgz
+
+  magic-string@https://registry.npmmirror.com/magic-string/-/magic-string-0.30.5.tgz:
+    dependencies:
+      '@jridgewell/sourcemap-codec': https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz
+
+  merge-stream@https://registry.npmmirror.com/merge-stream/-/merge-stream-2.0.0.tgz: {}
+
+  mimic-fn@https://registry.npmmirror.com/mimic-fn/-/mimic-fn-4.0.0.tgz: {}
+
+  mlly@https://registry.npmmirror.com/mlly/-/mlly-1.5.0.tgz:
+    dependencies:
+      acorn: https://registry.npmmirror.com/acorn/-/acorn-8.11.3.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+      pkg-types: https://registry.npmmirror.com/pkg-types/-/pkg-types-1.0.3.tgz
+      ufo: https://registry.npmmirror.com/ufo/-/ufo-1.3.2.tgz
+
+  ms@https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz: {}
+
+  nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.7.tgz: {}
+
+  npm-run-path@https://registry.npmmirror.com/npm-run-path/-/npm-run-path-5.2.0.tgz:
+    dependencies:
+      path-key: https://registry.npmmirror.com/path-key/-/path-key-4.0.0.tgz
+
+  onetime@https://registry.npmmirror.com/onetime/-/onetime-6.0.0.tgz:
+    dependencies:
+      mimic-fn: https://registry.npmmirror.com/mimic-fn/-/mimic-fn-4.0.0.tgz
+
+  p-limit@https://registry.npmmirror.com/p-limit/-/p-limit-5.0.0.tgz:
+    dependencies:
+      yocto-queue: https://registry.npmmirror.com/yocto-queue/-/yocto-queue-1.0.0.tgz
+
+  path-key@https://registry.npmmirror.com/path-key/-/path-key-3.1.1.tgz: {}
+
+  path-key@https://registry.npmmirror.com/path-key/-/path-key-4.0.0.tgz: {}
+
+  pathe@https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz: {}
+
+  pathval@https://registry.npmmirror.com/pathval/-/pathval-1.1.1.tgz: {}
+
+  picocolors@https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz: {}
+
+  pkg-types@https://registry.npmmirror.com/pkg-types/-/pkg-types-1.0.3.tgz:
+    dependencies:
+      jsonc-parser: https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz
+      mlly: https://registry.npmmirror.com/mlly/-/mlly-1.5.0.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+
+  postcss@https://registry.npmmirror.com/postcss/-/postcss-8.4.33.tgz:
+    dependencies:
+      nanoid: https://registry.npmmirror.com/nanoid/-/nanoid-3.3.7.tgz
+      picocolors: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz
+      source-map-js: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz
+
+  pretty-format@https://registry.npmmirror.com/pretty-format/-/pretty-format-29.7.0.tgz:
+    dependencies:
+      '@jest/schemas': https://registry.npmmirror.com/@jest/schemas/-/schemas-29.6.3.tgz
+      ansi-styles: https://registry.npmmirror.com/ansi-styles/-/ansi-styles-5.2.0.tgz
+      react-is: https://registry.npmmirror.com/react-is/-/react-is-18.2.0.tgz
+
+  react-is@https://registry.npmmirror.com/react-is/-/react-is-18.2.0.tgz: {}
+
+  rollup@https://registry.npmmirror.com/rollup/-/rollup-4.9.5.tgz:
+    dependencies:
+      '@types/estree': https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz
+    optionalDependencies:
+      '@rollup/rollup-android-arm-eabi': 4.9.5
+      '@rollup/rollup-android-arm64': 4.9.5
+      '@rollup/rollup-darwin-arm64': 4.9.5
+      '@rollup/rollup-darwin-x64': 4.9.5
+      '@rollup/rollup-linux-arm-gnueabihf': 4.9.5
+      '@rollup/rollup-linux-arm64-gnu': 4.9.5
+      '@rollup/rollup-linux-arm64-musl': 4.9.5
+      '@rollup/rollup-linux-riscv64-gnu': 4.9.5
+      '@rollup/rollup-linux-x64-gnu': 4.9.5
+      '@rollup/rollup-linux-x64-musl': 4.9.5
+      '@rollup/rollup-win32-arm64-msvc': 4.9.5
+      '@rollup/rollup-win32-ia32-msvc': 4.9.5
+      '@rollup/rollup-win32-x64-msvc': 4.9.5
+      fsevents: 2.3.3
+
+  shebang-command@https://registry.npmmirror.com/shebang-command/-/shebang-command-2.0.0.tgz:
+    dependencies:
+      shebang-regex: https://registry.npmmirror.com/shebang-regex/-/shebang-regex-3.0.0.tgz
+
+  shebang-regex@https://registry.npmmirror.com/shebang-regex/-/shebang-regex-3.0.0.tgz: {}
+
+  siginfo@https://registry.npmmirror.com/siginfo/-/siginfo-2.0.0.tgz: {}
+
+  signal-exit@https://registry.npmmirror.com/signal-exit/-/signal-exit-4.1.0.tgz: {}
+
+  source-map-js@https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz: {}
+
+  stackback@https://registry.npmmirror.com/stackback/-/stackback-0.0.2.tgz: {}
+
+  std-env@https://registry.npmmirror.com/std-env/-/std-env-3.7.0.tgz: {}
+
+  strip-final-newline@https://registry.npmmirror.com/strip-final-newline/-/strip-final-newline-3.0.0.tgz: {}
+
+  strip-literal@https://registry.npmmirror.com/strip-literal/-/strip-literal-1.3.0.tgz:
+    dependencies:
+      acorn: https://registry.npmmirror.com/acorn/-/acorn-8.11.3.tgz
+
+  tinybench@https://registry.npmmirror.com/tinybench/-/tinybench-2.5.1.tgz: {}
+
+  tinypool@https://registry.npmmirror.com/tinypool/-/tinypool-0.8.1.tgz: {}
+
+  tinyspy@https://registry.npmmirror.com/tinyspy/-/tinyspy-2.2.0.tgz: {}
+
+  type-detect@https://registry.npmmirror.com/type-detect/-/type-detect-4.0.8.tgz: {}
+
+  ufo@https://registry.npmmirror.com/ufo/-/ufo-1.3.2.tgz: {}
+
+  vite-node@https://registry.npmmirror.com/vite-node/-/vite-node-1.2.0.tgz:
+    dependencies:
+      cac: https://registry.npmmirror.com/cac/-/cac-6.7.14.tgz
+      debug: https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+      picocolors: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz
+      vite: https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  vite@https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz:
+    dependencies:
+      esbuild: https://registry.npmmirror.com/esbuild/-/esbuild-0.19.11.tgz
+      postcss: https://registry.npmmirror.com/postcss/-/postcss-8.4.33.tgz
+      rollup: https://registry.npmmirror.com/rollup/-/rollup-4.9.5.tgz
+    optionalDependencies:
+      fsevents: 2.3.3
+
+  vitest@https://registry.npmmirror.com/vitest/-/vitest-1.2.0.tgz:
+    dependencies:
+      '@vitest/expect': https://registry.npmmirror.com/@vitest/expect/-/expect-1.2.0.tgz
+      '@vitest/runner': https://registry.npmmirror.com/@vitest/runner/-/runner-1.2.0.tgz
+      '@vitest/snapshot': https://registry.npmmirror.com/@vitest/snapshot/-/snapshot-1.2.0.tgz
+      '@vitest/spy': https://registry.npmmirror.com/@vitest/spy/-/spy-1.2.0.tgz
+      '@vitest/utils': https://registry.npmmirror.com/@vitest/utils/-/utils-1.2.0.tgz
+      acorn-walk: https://registry.npmmirror.com/acorn-walk/-/acorn-walk-8.3.2.tgz
+      cac: https://registry.npmmirror.com/cac/-/cac-6.7.14.tgz
+      chai: https://registry.npmmirror.com/chai/-/chai-4.4.1.tgz
+      debug: https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz
+      execa: https://registry.npmmirror.com/execa/-/execa-8.0.1.tgz
+      local-pkg: https://registry.npmmirror.com/local-pkg/-/local-pkg-0.5.0.tgz
+      magic-string: https://registry.npmmirror.com/magic-string/-/magic-string-0.30.5.tgz
+      pathe: https://registry.npmmirror.com/pathe/-/pathe-1.1.2.tgz
+      picocolors: https://registry.npmmirror.com/picocolors/-/picocolors-1.0.0.tgz
+      std-env: https://registry.npmmirror.com/std-env/-/std-env-3.7.0.tgz
+      strip-literal: https://registry.npmmirror.com/strip-literal/-/strip-literal-1.3.0.tgz
+      tinybench: https://registry.npmmirror.com/tinybench/-/tinybench-2.5.1.tgz
+      tinypool: https://registry.npmmirror.com/tinypool/-/tinypool-0.8.1.tgz
+      vite: https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz
+      vite-node: https://registry.npmmirror.com/vite-node/-/vite-node-1.2.0.tgz
+      why-is-node-running: https://registry.npmmirror.com/why-is-node-running/-/why-is-node-running-2.2.2.tgz
+    transitivePeerDependencies:
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  which@https://registry.npmmirror.com/which/-/which-2.0.2.tgz:
+    dependencies:
+      isexe: https://registry.npmmirror.com/isexe/-/isexe-2.0.0.tgz
+
+  why-is-node-running@https://registry.npmmirror.com/why-is-node-running/-/why-is-node-running-2.2.2.tgz:
+    dependencies:
+      siginfo: https://registry.npmmirror.com/siginfo/-/siginfo-2.0.0.tgz
+      stackback: https://registry.npmmirror.com/stackback/-/stackback-0.0.2.tgz
+
+  yocto-queue@https://registry.npmmirror.com/yocto-queue/-/yocto-queue-1.0.0.tgz: {}
