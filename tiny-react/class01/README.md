@@ -11,8 +11,7 @@
 在这 7 天的 mini-react 训练营中，我学到了：
 
 - [x] 实现`createElement`和`render`函数
-- [x] 实现`任务调度器requestIdleCallback`
-- [x] 实现简易的`fiber`
+- [x] 实现`任务调度器requestIdleCallback`和简易的`fiber`
 - [x] 实现`functionComponent`
 - [x] 实现`事件绑定`
 - [x] 实现`props`
@@ -28,27 +27,26 @@
 
 ```js
 function createTextNode(text) {
-	return {
-		type: "TEXT_ELEMENT",
-		props: {
-			nodeValue: text,
-			children: [],
-		},
-	}
+  return {
+    type: "TEXT_ELEMENT",
+    props: {
+      nodeValue: text,
+      children: [],
+    },
+  };
 }
 
 function createElement(type, props, ...children) {
-	return {
-		type,
-		props: {
-			...props,
-			children: children.map((child) => {
-				const isTextNode =
-					typeof child === "string" || typeof child === "number"
-				return isTextNode ? createTextNode(child) : child
-			}),
-		},
-	}
+  return {
+    type,
+    props: {
+      ...props,
+      children: children.map((child) => {
+        const isTextNode = typeof child === "string" || typeof child === "number";
+        return isTextNode ? createTextNode(child) : child;
+      }),
+    },
+  };
 }
 ```
 
@@ -68,22 +66,19 @@ function createElement(type, props, ...children) {
 
 ```js
 function render(el, container) {
-	const dom =
-		el.type === "TEXT_ELEMENT"
-			? document.createTextNode("")
-			: document.createElement(el.type)
+  const dom = el.type === "TEXT_ELEMENT" ? document.createTextNode("") : document.createElement(el.type);
 
-	// id class
-	Object.keys(el.props).forEach((key) => {
-		if (key !== "children") {
-			dom[key] = el.props[key]
-		}
-	})
-	const children = el.props.children
-	children.forEach((child) => {
-		render(child, dom)
-	})
-	container.append(dom)
+  // id class
+  Object.keys(el.props).forEach((key) => {
+    if (key !== "children") {
+      dom[key] = el.props[key];
+    }
+  });
+  const children = el.props.children;
+  children.forEach((child) => {
+    render(child, dom);
+  });
+  container.append(dom);
 }
 ```
 
@@ -95,18 +90,18 @@ function render(el, container) {
 在`ReactDom`文件导出`render`函数之后， 调用`ReactDOM.createRoot(element).render` 函数。这样，就可以使用 React 的渲染功能了。
 
 ```js
-import React from "./React.js"
+import React from "./React.js";
 const ReactDOM = {
-	createRoot(container) {
-		return {
-			render(App) {
-				React.render(App, container)
-			},
-		}
-	},
-}
+  createRoot(container) {
+    return {
+      render(App) {
+        React.render(App, container);
+      },
+    };
+  },
+};
 
-export default ReactDOM
+export default ReactDOM;
 ```
 
 ### 示例解析
@@ -115,15 +110,15 @@ export default ReactDOM
 
 ```jsx
 function App() {
-	return (
-		<div>
-			hello world, my mini react!
-			<div>befend</div>
-		</div>
-	)
+  return (
+    <div>
+      hello world, my mini react!
+      <div>befend</div>
+    </div>
+  );
 }
 
-export default App
+export default App;
 ```
 
 #### 节点创建的过程内容

@@ -1,4 +1,4 @@
-# 实现`任务调度器requestIdleCallback`
+# 实现`任务调度器requestIdleCallback`和简易的`fiber`
 
 ---
 
@@ -16,11 +16,11 @@ highlight: a11y-dark
 如下代码所示：
 
 ```js
-let i = 0
+let i = 0;
 // 当数值过大时，会造成浏览器的卡顿
 while (i < 1000000000000) {
-	// 假如递归多个dom生成
-	i++
+  // 假如递归多个dom生成
+  i++;
 }
 ```
 
@@ -66,35 +66,35 @@ while (i < 1000000000000) {
 ```js
 // 无超时，一般打印值为 49/50 ms
 function work(deadline) {
-	console.log(`当前帧剩余时间: ${deadline.timeRemaining()}`)
-	requestIdleCallback(work)
+  console.log(`当前帧剩余时间: ${deadline.timeRemaining()}`);
+  requestIdleCallback(work);
 }
-requestIdleCallback(work)
+requestIdleCallback(work);
 
 // =====================================================================
 // 有超时，打印值就不怎么固定了
 function work(deadline) {
-	console.log(`当前帧剩余时间: ${deadline.timeRemaining()}`)
-	requestIdleCallback(work, { timeout: 1500 })
+  console.log(`当前帧剩余时间: ${deadline.timeRemaining()}`);
+  requestIdleCallback(work, { timeout: 1500 });
 }
-requestIdleCallback(work, { timeout: 1500 })
+requestIdleCallback(work, { timeout: 1500 });
 ```
 
 ### React 中的任务调度
 
 ```js
-let nextWorkUnit = null
+let nextWorkUnit = null;
 function workLoop(deadline) {
-	let shouldYield = false
-	while (!shouldYield && nextWorkUnit) {
-		// dom 渲染
-		nextWorkUnit = preformOfWorkUnit(nextWorkUnit)
-		shouldYield = deadline.timeRemaining() < 1
-	}
-	requestIdleCallback(workLoop)
+  let shouldYield = false;
+  while (!shouldYield && nextWorkUnit) {
+    // dom 渲染
+    nextWorkUnit = preformOfWorkUnit(nextWorkUnit);
+    shouldYield = deadline.timeRemaining() < 1;
+  }
+  requestIdleCallback(workLoop);
 }
 
-requestIdleCallback(workLoop)
+requestIdleCallback(workLoop);
 ```
 
 ### 小结
