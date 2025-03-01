@@ -1,0 +1,19 @@
+{
+	"name": "mini-react",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"test": "vitest",
+		"preview": "vite preview"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"vite": "^5.0.8",
+		"vitest": "^1.2.0"
+	}
+}

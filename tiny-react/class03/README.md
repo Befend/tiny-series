@@ -173,9 +173,10 @@ function initChildren(fiber) {
 }
 ```
 
-### 小结
+### 仓库传送门
 
-仓库传送门： [https://github.com/Befend/tiny-series/tree/master/tiny-react/class02]()
+- [https://github.com/Befend/tiny-series/tree/master/tiny-react/class02](https://github.com/Befend/tiny-series/tree/master/tiny-react/class02)
+- [https://github.com/Befend/tiny-series/tree/master/tiny-react/class03](https://github.com/Befend/tiny-series/tree/master/tiny-react/class03)
 
 ### 参考
 
@@ -184,3 +185,4 @@ function initChildren(fiber) {
 ### 系列文章
 
 - [实现`createElement`和`render`函数](https://juejin.cn/post/7326093660705128460)
+- [实现`任务调度器requestIdleCallback`和简易的`Fiber`](https://juejin.cn/post/7471968780866338843)

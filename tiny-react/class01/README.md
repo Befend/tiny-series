@@ -137,3 +137,8 @@ export default App;
 总的来说，`createElement` 用于创建虚拟 DOM 元素，而 `render` 用于将这些虚拟 DOM 元素渲染到实际 DOM 中，从而构建用户界面。
 
 仓库传送门： [https://github.com/Befend/mini-react](https://github.com/Befend/mini-react)
+
+### 系列文章
+
+- [实现`createElement`和`render`函数](https://juejin.cn/post/7326093660705128460)
+- [实现`任务调度器requestIdleCallback`和简易的`Fiber`](https://juejin.cn/post/7471968780866338843)
